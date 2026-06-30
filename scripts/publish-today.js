@@ -31,7 +31,8 @@ function main() {
     excerpt: next.excerpt || '',
     date: new Date().toLocaleDateString('es-ES', { day: '2-digit', month: 'short', year: 'numeric' }).replace('.', ''),
     readTime: next.readTime,
-    category: next.category
+    category: next.category,
+    views: 0
   };
 
   const published = JSON.parse(fs.readFileSync(PUBLISHED_PATH, 'utf8'));
