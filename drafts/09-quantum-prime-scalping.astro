@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="OmniFlow Quantum Prime — Estrategias de scalping con el algoritmo paramétrico" description="Descubre cómo OmniFlow Quantum Prime se adapta automáticamente a la volatilidad del mercado para darte señales de scalping con precisión quirúrgica en timeframes de 1-5 minutos.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Herramientas</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 6 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">OmniFlow Quantum Prime — Estrategias de scalping</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">El scalping requiere velocidad y precisión. Quantum Prime te da ambas con su algoritmo paramétrico auto-adaptable.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Qué hace único a Quantum Prime para scalping?</h2>
+          <p>Los indicadores tradicionales de scalping usan parámetros fijos que funcionan bien en un tipo de mercado y mal en otros. Quantum Prime es <strong class="text-white">paramétrico</strong>: ajusta automáticamente su sensibilidad según la volatilidad actual. En mercados rápidos, se vuelve más selectivo. En mercados lentos, se vuelve más sensible.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Estrategia 1: Scalping en apertura de NY</h2>
+          <p>Los primeros 30 minutos después de la apertura (9:30-10:00 AM ET) son los de mayor volatilidad. Quantum Prime detecta micro-desequilibrios de órdenes que ocurren en segundos. Configura:</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Timeframe: 1 minuto.</li>
+            <li>Objetivo: 4-6 ticks en NQ.</li>
+            <li>Stop: 2-3 ticks.</li>
+            <li>Modo: Alta sensibilidad (parámetro predefinido).</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Estrategia 2: Scalping en sesión europea</h2>
+          <p>De 3:00 a 5:00 AM ET, los mercados europeos están activos y los americanos aún cerrados. La volatilidad es menor pero las tendencias son más limpias. Quantum Prime se adapta automáticamente reduciendo su sensibilidad para evitar señales falsas en el ruido reducido.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Combinación con GPRiskReward</h2>
+          <p>Quantum Prime funciona excepcionalmente bien con <strong class="text-white">GPRiskReward</strong>. Mientras Quantum Prime te da la señal de entrada, GPRiskReward calcula el tamaño exacto de posición y coloca el OCO One-Click. La combinación reduce el tiempo de ejecución a menos de 2 segundos.</p>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <p class="text-sm text-gray-400">Scalping de precisión con algoritmo adaptativo. <a href="/#detalle-quantumprime" class="text-accent hover:underline">OmniFlow Quantum Prime</a>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

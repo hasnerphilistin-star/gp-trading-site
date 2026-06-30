@@ -1,0 +1,56 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="Algoritmos de trading: qué son y cómo funcionan realmente" description="Los algoritmos de trading no son magia. Aprende qué son realmente, cómo funcionan los sistemas automatizados y por qué no necesitas ser programador para usarlos en NT8.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Educación</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 7 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Algoritmos de trading: qué son y cómo funcionan realmente</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">El término "algoritmo" suena a complejidad, pero en realidad es más simple de lo que crees. Y no necesitas saber programar para beneficiarte de ellos.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Qué es un algoritmo de trading?</h2>
+          <p>Un algoritmo de trading es simplemente un <strong class="text-white">conjunto de reglas</strong> que determinan cuándo comprar o vender. No tiene que ser código complejo ni inteligencia artificial. Puede ser tan simple como "compra cuando el precio cruce la media de 200".</p>
+          <p class="mt-3">La diferencia entre un trader que "improvisa" y uno algorítmico es que el segundo tiene sus reglas definidas y las sigue sin excepción.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Tipos de algoritmos</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">Algoritmos de ejecución:</strong> Automatizan la entrada y salida. Ej: TWAP, VWAP, Iceberg. Los usan los institucionales para no mover el mercado.</li>
+            <li><strong class="text-white">Algoritmos de señal:</strong> Generan señales de compra/venta. Ej: los indicadores de GP Trading como <strong class="text-white">Nexus Trend Engine</strong> o <strong class="text-white">OmniFlow GFlow X</strong>.</li>
+            <li><strong class="text-white">Algoritmos de gestión de riesgo:</strong> Controlan el tamaño de posición, stops y límites. Ej: <strong class="text-white">GPRiskReward</strong>.</li>
+            <li><strong class="text-white">Sistemas completos (bots):</strong> Automatizan todo el proceso: señal + ejecución + riesgo.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Necesitas saber programar?</h2>
+          <p>No necesariamente. Las herramientas de GP Trading son <strong class="text-white">algoritmos empaquetados</strong> que puedes usar sin escribir una línea de código. Tienen parámetros ajustables para que los adaptes a tu estilo sin necesidad de programar.</p>
+          <p class="mt-3">Si quieres crear tus propios indicadores, NinjaTrader 8 usa NinjaScript (C#). Pero el 90% de los traders obtienen mejores resultados usando herramientas ya probadas que programando las suyas propias.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">El peligro de los algoritmos "caja negra"</h2>
+          <p>Desconfía de cualquier algoritmo que no puedas entender. Si no sabes por qué te da una señal, no sabes cuándo va a fallar. Los algoritmos de GP Trading son transparentes: <strong class="text-white">sabes exactamente qué está calculando cada herramienta</strong> y por qué.</p>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <p class="text-sm text-gray-400">Los algoritmos no reemplazan al trader, lo potencian. <a href="/#detalle" class="text-accent hover:underline">Descubre los algoritmos de GP Trading</a>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

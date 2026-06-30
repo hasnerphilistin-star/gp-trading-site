@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="ICT / SMC Avanzado: Fair Value Gaps y cómo operarlos" description="Los Fair Value Gaps (FVG) son la herramienta más poderosa del SMC. Aprende a identificarlos, medirlos y operarlos con herramientas de Order Flow en NinjaTrader 8.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Educación</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 7 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">ICT / SMC Avanzado: Fair Value Gaps y cómo operarlos</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">Los Fair Value Gaps son zonas de precio no negociado que el mercado tiende a rellenar. Aquí cómo identificarlos y operarlos con precisión.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Qué es un Fair Value Gap?</h2>
+          <p>Un FVG ocurre cuando el precio se mueve tan rápido en una dirección que deja un "hueco" en el que no hubo negociación. Se forma entre el cuerpo de 3 velas consecutivas: la primera y la tercera velas tienen cuerpos que no se superponen completamente.</p>
+          <p class="mt-3">La teoría SMC dice que el precio volverá a estas zonas para "rellenar el gap" antes de continuar la tendencia. Los FVG actúan como imanes de precio.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Cómo identificar un FVG</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Busca 3 velas consecutivas en tendencia fuerte.</li>
+            <li>La vela 1 y 3 deben tener cuerpos que no se solapen completamente.</li>
+            <li>La zona entre el cuerpo de la vela 1 y la vela 3 es el FVG.</li>
+            <li>El FVG debe estar acompañado de volumen creciente para ser válido.</li>
+          </ul>
+          <p class="mt-3"><strong class="text-white">GFlow Pro Premium</strong> puede ayudarte a confirmar que el FVG se formó con volumen genuino, no con ruido.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Estrategia para operar FVG</h2>
+          <h3 class="text-lg font-bold text-accent mb-2">Entrada por relleno de FVG</h3>
+          <p>Espera a que el precio vuelva al FVG. Entra en la dirección de la tendencia original cuando veas rechazo en el borde del gap. Stop Loss: más allá del FVG. Objetivo: el extremo opuesto del gap o la continuación de la tendencia.</p>
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">FVG + Order Flow</h3>
+          <p>La combinación es letal: usa <strong class="text-white">OmniFlow GFlow X</strong> con Kinetic Singularity para detectar cuándo el precio está a punto de rellenar el FVG. La señal de Kinetic Singularity en el borde del gap es la confirmación definitiva.</p>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <p class="text-sm text-gray-400">Los FVG son una de las herramientas más rentables del SMC. La suite GP Trading te da la confirmación que necesitas. <a href="/#detalle" class="text-accent hover:underline">Explorar herramientas</a>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

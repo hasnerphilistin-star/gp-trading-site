@@ -1,0 +1,53 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="Las 5 métricas que todo trader de futuros debe monitorear" description="No todas las métricas importan. Aquí las 5 que realmente determinan si estás operando bien o mal: Sharpe, Win Rate, R:R, Drawdown y Expectativa.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Educación</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 6 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Las 5 métricas que todo trader de futuros debe monitorear</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">Deja de mirar solo el P&L. Estas 5 métricas te dicen si realmente estás mejorando como trader.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">1. Sharpe Ratio</h2>
+          <p>Mide la rentabilidad ajustada por riesgo. Un Sharpe de 1.0 significa que tus ganancias son proporcionales al riesgo que tomaste. Por encima de 2.0 es excelente. Por debajo de 0.5 significa que estás tomando demasiado riesgo para las ganancias que obtienes.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">2. Win Rate</h2>
+          <p>El porcentaje de operaciones ganadoras. No lo persigas: un Win Rate del 40% con R:R de 1:3 es más rentable que un 70% con R:R de 1:1. Lo importante es que tu Win Rate sea <strong class="text-white">consistente</strong>.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">3. Ratio Risk/Reward promedio</h2>
+          <p>La relación entre tu ganancia promedio y tu pérdida promedio. Un R:R de 1:2 significa que ganas el doble cuando aciertas de lo que pierdes cuando fallas. <strong class="text-white">GPRiskReward</strong> te ayuda a mantener este ratio en cada operación.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">4. Drawdown máximo</h2>
+          <p>La mayor caída desde el pico de tu cuenta. Un Drawdown del 20% requiere una ganancia del 25% para recuperarse. Del 50% requiere 100%. Tu objetivo: mantener el Drawdown por debajo del 10% siempre.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">5. Expectativa (EV)</h2>
+          <p>La métrica más importante. Expectativa = (Win Rate × Ganancia Promedio) − (Loss Rate × Pérdida Promedio). Si tu expectativa es positiva, tienes edge. Si es negativa, no importa lo que hagas, vas a perder dinero a largo plazo.</p>
+        </section>
+        <div class="p-4 bg-accent/5 border border-accent/10 rounded-xl">
+          <p class="text-xs text-gray-400">📊 Monitorear estas métricas te separa del 90% de los traders que solo miran el P&L diario. La suite GP Trading te da las herramientas para mejorar cada una de ellas.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

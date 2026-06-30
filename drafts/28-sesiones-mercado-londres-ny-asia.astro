@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="Sesiones de mercado: Londres, Nueva York y Asia — cómo operar cada una" description="Cada sesión de mercado tiene personalidad propia. Aprende a operar Londres, Nueva York y Asia con estrategias específicas y herramientas de GP Trading.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Educación</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 7 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Sesiones de mercado: Londres, Nueva York y Asia — cómo operar cada una</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">Cada sesión tiene su propia personalidad. Lo que funciona en Nueva York no funciona en Asia. Aprende a adaptar tu operativa.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Sesión Asiática (19:00 - 4:00 ET)</h2>
+          <p>La sesión más tranquila. El volumen es bajo, los rangos son estrechos. Los movimientos direccionales son raros y suelen ser continuación de la sesión americana anterior.</p>
+          <p class="mt-3"><strong class="text-accent">Estrategia:</strong> No busques grandes movimientos en NQ/ES. Mejor opera pares con yen (6J) o índices asiáticos si tienes acceso. Usa <strong class="text-white">Quantum Prime</strong> en modo baja sensibilidad para capturar micro-movimientos. TP ajustados (3-5 ticks).</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Sesión Europea (3:00 - 12:00 ET)</h2>
+          <p>Londres despierta el mercado. El volumen aumenta gradualmente hasta el solapamiento con NY. Es la mejor sesión para forex y materias primas. El oro (GC) y el petróleo (CL) suelen tener sus mejores movimientos en este horario.</p>
+          <p class="mt-3"><strong class="text-accent">Estrategia:</strong> Opera GC y CL con <strong class="text-white">GP VWAP Clásico</strong> y bandas de desviación. La tendencia europea suele ser más limpia que la americana. Usa <strong class="text-white">Specter Trend Cloud</strong> para identificar la dirección.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Sesión Americana (9:30 - 16:00 ET)</h2>
+          <p>La reina. El 70% del volumen global ocurre en esta sesión. Alta volatilidad, movimientos direccionales fuertes, y la mayor liquidez del día. También es donde ocurren las trampas más grandes.</p>
+          <p class="mt-3"><strong class="text-accent">Estrategia:</strong> Usa <strong class="text-white">GFlow PRO v2.0</strong> con Modo Dios en los primeros 30 minutos para filtrar el ruido de apertura. El mejor momento para operar es entre 10:00 AM y 11:30 AM ET, cuando el mercado se asienta después de la apertura.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Solapamiento Londres-NY (8:00 - 12:00 ET)</h2>
+          <p>El momento de mayor liquidez global. Las 4 horas de solapamiento son las más volátiles y también las más predecibles. Las tendencias que se forman aquí suelen ser las más fiables del día.</p>
+        </section>
+        <div class="p-4 bg-accent/5 border border-accent/10 rounded-xl">
+          <p class="text-xs text-gray-400">⏰ Consejo: Especialízate en una sesión. Los traders que intentan operar las 3 terminan agotados y perdiendo dinero. Elige tu horario y domínalo.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

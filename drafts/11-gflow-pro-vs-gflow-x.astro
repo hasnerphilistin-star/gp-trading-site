@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="GFlow Pro Premium vs OmniFlow GFlow X — ¿Cuál necesitas?" description="Comparativa detallada entre GFlow Pro Premium y OmniFlow GFlow X. Features, precios, rendimiento y para quién está diseñada cada herramienta de Order Flow de GP Trading.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Herramientas</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 5 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">GFlow Pro Premium vs OmniFlow GFlow X — ¿Cuál necesitas?</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">Dos herramientas de Order Flow de GP Trading, dos niveles de profundidad. Aquí te ayudamos a decidir cuál es la tuya.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">GFlow Pro Premium — $300</h2>
+          <p>Es la puerta de entrada al Order Flow de GP Trading. Incluye:</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Mapa de calor de liquidez en tiempo real.</li>
+            <li>Detección de muros de oferta y demanda.</li>
+            <li>Volume Profile de sesión (POC, VAH, VAL).</li>
+            <li>Confluencias visuales básicas.</li>
+          </ul>
+          <p class="mt-3"><strong class="text-white">Ideal para:</strong> Traders que empiezan con Order Flow, operan swing o position trading en timeframes de 15m a 1h.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">OmniFlow GFlow X — $499</h2>
+          <p>Es el siguiente nivel. Incluye todo lo de GFlow Pro Premium más:</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Kinetic Singularity: detección de puntos de inflexión.</li>
+            <li>Proyecciones TP1-TP4 basadas en liquidez.</li>
+            <li>Panel HUD inteligente con métricas en vivo.</li>
+            <li>Alertas configurables por evento.</li>
+          </ul>
+          <p class="mt-3"><strong class="text-white">Ideal para:</strong> Traders de day trading y scalping que necesitan precisión en timeframes de 1m a 15m.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Y OmniFlow GFlow PRO v2.0?</h2>
+          <p>El PRO v2.0 ($699) es la herramienta tope de gama con Modo Dios, Zonas Verificadas, Radiación Cinética y HUD Direct2D. Está entre GFlow X y el PRO v2.0 hay un salto significativo en complejidad y precisión.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Tabla rápida</h2>
+          <div class="grid grid-cols-3 gap-2 text-xs font-mono">
+            <div class="p-2 bg-white/5 rounded">Feature</div><div class="p-2 bg-white/5 rounded text-center">Premium</div><div class="p-2 bg-white/5 rounded text-center">GFlow X</div>
+            <div class="p-2">Mapa de calor</div><div class="p-2 text-center text-accent">✓</div><div class="p-2 text-center text-accent">✓</div>
+            <div class="p-2">Volume Profile</div><div class="p-2 text-center text-accent">✓</div><div class="p-2 text-center text-accent">✓</div>
+            <div class="p-2">Kinetic Singularity</div><div class="p-2 text-center text-gray-600">—</div><div class="p-2 text-center text-accent">✓</div>
+            <div class="p-2">TP1-TP4</div><div class="p-2 text-center text-gray-600">—</div><div class="p-2 text-center text-accent">✓</div>
+            <div class="p-2">Panel HUD</div><div class="p-2 text-center text-gray-600">—</div><div class="p-2 text-center text-accent">✓</div>
+            <div class="p-2">Precio</div><div class="p-2 text-center text-gold">$300</div><div class="p-2 text-center text-gold">$499</div>
+          </div>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <p class="text-sm text-gray-400">¿Aún con dudas? Ambos productos tienen upgrade disponible. Empieza con Premium y actualiza cuando necesites más. <a href="/#detalle" class="text-accent hover:underline">Ver productos</a>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="TradeSyncer PRO v2.0 — Guía para operar 10 cuentas de prop firms" description="Aprende a configurar TradeSyncer PRO v2.0 para operar múltiples cuentas de prop firms simultáneamente con Daily Loss Limit individual y sincronización perfecta.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Herramientas</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 6 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">TradeSyncer PRO v2.0 — Guía para operar 10 cuentas de prop firms</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">Configurar TradeSyncer PRO para múltiples cuentas de prop firms no es complicado, pero tiene sus trucos. Aquí una guía paso a paso.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">El desafío de las múltiples cuentas</h2>
+          <p>Operar 10 cuentas de prop firms manualmente es imposible. Cada cuenta tiene su propio DDM, su propio objetivo y sus propias reglas. TradeSyncer PRO v2.0 resuelve este problema permitiéndote operar una sola cuenta maestra y replicar todo automáticamente en las demás.</p>
+          <p class="mt-3">El truco está en la configuración: cada cuenta debe tener su propio Daily Loss Limit y sus propios filtros de instrumento.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Paso 1: Configura la cuenta maestra</h2>
+          <p>Elige la cuenta que usas para analizar y ejecutar tus entradas. Esta será la cuenta "maestra". Asegúrate de tener habilitada la sincronización bidireccional para que los cierres manuales en cualquier cuenta se repliquen.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Paso 2: Añade las cuentas esclavas</h2>
+          <p>TradeSyncer PRO soporta hasta 20 cuentas simultáneas. Añade cada cuenta de prop firm una por una. Importante: verifica que los nombres de las cuentas en NinjaTrader coincidan exactamente.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Paso 3: Configura Daily Loss Limit individual</h2>
+          <p>Cada cuenta de prop firm tiene un DDM distinto. TradeSyncer PRO te permite configurar el límite por cuenta. Si una cuenta alcanza su límite, se detiene automáticamente sin afectar a las demás.</p>
+          <p class="mt-3"><strong class="text-accent">Recomendación:</strong> Configura el DDM al 80% del límite real de la prop firm para tener margen de seguridad.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Paso 4: Filtros por instrumento</h2>
+          <p>No todas las cuentas operan los mismos instrumentos. Configura filtros para que cada cuenta solo reciba los trades que puede operar. Por ejemplo: Cuenta A solo NQ, Cuenta B solo ES, Cuenta C ambos.</p>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <p class="text-sm text-gray-400">¿Listo para escalar? <a href="/#detalle-tradesyncer" class="text-accent hover:underline">TradeSyncer PRO v2.0</a> está diseñado para este escenario exacto.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

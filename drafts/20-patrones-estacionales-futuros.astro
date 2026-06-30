@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="Patrones estacionales en futuros: cómo aprovecharlos" description="Los futuros tienen patrones estacionales que se repiten año tras año. Aprende a identificarlos y a operarlos con herramientas de GP Trading en NinjaTrader 8.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Educación</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 7 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Patrones estacionales en futuros: cómo aprovecharlos</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">Los mercados de futuros tienen comportamientos estacionales predecibles. Conocerlos te da una ventaja estadística adicional.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Qué son los patrones estacionales?</h2>
+          <p>Son comportamientos del mercado que se repiten en ciertas épocas del año debido a factores estructurales: cosechas, ciclos fiscales, vacaciones, reportes corporativos, etc. No son certezas, pero sí <strong class="text-white">probabilidades aumentadas</strong>.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Patrones clave del NQ</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">Enero:</strong> "Enero Effect". Los primeros 5 días suelen marcar la dirección del mes. Históricamente alcista el 70% de las veces.</li>
+            <li><strong class="text-white">Abril:</strong> Temporada de earnings. Alta volatilidad, buenos movimientos direccionales post-earnings.</li>
+            <li><strong class="text-white">Junio-Julio:</strong> "Summer Rally". Tendencia alcista suave con menor volumen. Ideal para swing trading.</li>
+            <li><strong class="text-white">Septiembre:</strong> Históricamente el peor mes para el NQ. Promedio negativo.</li>
+            <li><strong class="text-white">Noviembre-Diciembre:</strong> "Santa Rally". Los mercados suelen subir en el último mes del año.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Patrones del petróleo (CL)</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">Enero-Febrero:</strong> Presión bajista por menor demanda estacional.</li>
+            <li><strong class="text-white">Abril-Mayo:</strong> "Driving Season" comienza. La demanda de gasolina sube, el crudo sube.</li>
+            <li><strong class="text-white">Octubre-Noviembre:</strong> Los huracanes en el Golfo pueden disparar el precio.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Cómo operar la estacionalidad</h2>
+          <p>Los patrones estacionales no son señales de entrada. Son <strong class="text-white">filtros de sesgo</strong>. Si es septiembre y el NQ tiene un patrón bajista histórico, prioriza operaciones cortas. Usa <strong class="text-white">Specter Trend Cloud</strong> o <strong class="text-white">Nexus Trend Engine</strong> para confirmar la dirección.</p>
+        </section>
+        <div class="p-4 bg-gold/5 border border-gold/10 rounded-xl">
+          <p class="text-xs text-gray-400">📅 Consejo: Marca en tu calendario los meses con patrones fuertes y ajusta tu tamaño de posición según la dirección estacional.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

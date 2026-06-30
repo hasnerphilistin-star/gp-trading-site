@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="OmniFlow GFlow X — Casos reales de Kinetic Singularity" description="Casos reales de uso de Kinetic Singularity en OmniFlow GFlow X. Cómo detectar puntos de inflexión en el Order Flow antes de que el precio reaccione.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Herramientas</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 6 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">OmniFlow GFlow X — Casos reales de Kinetic Singularity</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">Kinetic Singularity no es teoría. Aquí casos reales de cómo traders identifican puntos de inflexión exactos con GFlow X.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Caso 1: Reversión en NQ antes del lunch</h2>
+          <p>Martes 10:45 AM ET. NQ en tendencia alcista desde la apertura. El precio muestra agotamiento: velas con cuerpos pequeños y sombras largas. Kinetic Singularity detecta un cambio abrupto en la velocidad del volumen: las órdenes de compra se están desacelerando mientras las de venta aumentan. Señal de reversión. El NQ cae 40 puntos en 15 minutos.</p>
+          <p class="mt-3"><strong class="text-accent">Lección:</strong> Kinetic Singularity no espera a que la vela se cierre. Detecta el cambio en tiempo real.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Caso 2: Breakout en ES con confirmación</h2>
+          <p>Jueves 9:35 AM ET, 5 minutos después de la apertura. ES en rango de 5 puntos durante 20 minutos. De repente, Kinetic Singularity marca un punto de aceleración alcista con volumen creciente. El precio rompe el rango y sube 15 puntos en 10 minutos. Quienes entraron en la señal de Kinetic Singularity capturaron el 80% del movimiento.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Cómo identificar una señal de Kinetic Singularity</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">Cambio de ritmo:</strong> El volumen se acelera o desacelera abruptamente.</li>
+            <li><strong class="text-white">Divergencia:</strong> El precio se mueve en una dirección pero el volumen se agota.</li>
+            <li><strong class="text-white">Confirmación multi-timeframe:</strong> La señal aparece en 2 timeframes distintos simultáneamente.</li>
+            <li><strong class="text-white">Zonas de liquidez:</strong> La señal ocurre cerca de un muro de liquidez detectado por GFlow X.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Kinetic Singularity + TP1-TP4</h2>
+          <p>Cuando Kinetic Singularity se activa, GFlow X proyecta automáticamente 4 niveles de Take Profit basados en la liquidez disponible. Esto te permite gestionar la operación con objetivos claros desde el momento de la entrada.</p>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <p class="text-sm text-gray-400">¿Quieres ver Kinetic Singularity en acción? <a href="/#detalle-gflowx" class="text-accent hover:underline">OmniFlow GFlow X</a> está a un clic.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="Combinando toda la suite GP Trading — Un día de trading real" description="Sigue el día de trading de un operador que usa toda la suite GP Trading: desde el análisis pre-market hasta el cierre de posiciones. Estrategia completa paso a paso.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Herramientas</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 8 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Combinando toda la suite GP Trading — Un día de trading real</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">Así es un día de trading real usando todas las herramientas de GP Trading en conjunto. Desde el café de la mañana hasta el cierre de posiciones.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">7:30 AM ET — Pre-market con GPCuantum X</h2>
+          <p>Antes de la apertura, abro GPCuantum X para ver el contexto multi-timeframe. El NQ está alcista en 4h, neutral en 15m y bajista en 1m. Conclusión: la tendencia mayor es alcista, esperaré un retroceso en 15m para entrar largo.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">8:00 AM ET — Sesgo con Nexus Trend Engine</h2>
+          <p>Nexus Trend Engine confirma: las 3 capas (momentum, volumen, estructura) muestran señal alcista en 4h. Mi sesgo del día es <strong class="text-white">comprar en retrocesos</strong>.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">9:30 AM ET — Apertura con GFlow PRO v2.0</h2>
+          <p>Abro OmniFlow GFlow PRO v2.0 con Modo Dios. El mapa de calor muestra un muro de demanda acumulándose justo debajo del VWAP. Zona Verificada activada. Espero.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">10:15 AM ET — Señal de entrada</h2>
+          <p>El NQ retrocede al VWAP. Kinetic Singularity se activa: cambio en la velocidad del volumen. El GFlow PRO v2.0 muestra señal COMPRA en Modo Dios. Entro con GPRiskReward: riesgo $200, Auto-Lotaje calcula 2 contratos NQ, OCO coloca SL a 8 ticks, TP1 en 16 ticks.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">10:45 AM ET — Gestión con Specter y Trailing</h2>
+          <p>El NQ sube 12 ticks. Muevo el Stop a breakeven. Specter Trend Cloud muestra nube verde (alcista). Dejo correr. TP1 se ejecuta a los 16 ticks. Muevo trailing stop en la posición restante.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">11:30 AM ET — Cierre</h2>
+          <p>La segunda posición se cierra con trailing stop en +22 ticks. Totales: +38 ticks en la operación. Cierro la sesión. TradeSyncer PRO replicó la operación en mis 5 cuentas de prop firms automáticamente.</p>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <p class="text-sm text-gray-400">Un día de trading con la suite completa. <a href="/#detalle" class="text-accent hover:underline">Cada herramienta tiene su momento</a>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

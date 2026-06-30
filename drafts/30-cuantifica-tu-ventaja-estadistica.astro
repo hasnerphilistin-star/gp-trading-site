@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="Cómo cuantificar tu ventaja estadística con datos reales" description="La ventaja estadística no es teoría. Aprende a calcular tu edge real usando datos de tus operaciones y las herramientas de GP Trading. Fórmulas y ejemplos prácticos.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Ventaja Estadística</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 6 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Cómo cuantificar tu ventaja estadística con datos reales</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">¿Tienes realmente edge o solo has tenido suerte? Aquí las fórmulas y el proceso para calcular tu ventaja estadística real.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Paso 1: Recopila datos suficientes</h2>
+          <p>Necesitas mínimo 100 operaciones para que las métricas sean estadísticamente significativas. Menos de 50 operaciones y los datos son ruido. Registra cada operación con: entrada, salida, ganancia/pérdida en ticks, R:R de la operación, y la herramienta que usaste para la señal.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Paso 2: Calcula tu Expectativa (EV)</h2>
+          <p class="font-mono text-xs bg-white/5 p-3 rounded">EV = (Win Rate × Ganancia Promedio) - (Loss Rate × Pérdida Promedio)</p>
+          <p class="mt-3">Ejemplo: 55% Win Rate, ganancia promedio de 2R, pérdida promedio de 1R.</p>
+          <p class="font-mono text-xs bg-white/5 p-3 rounded">EV = (0.55 × 2) - (0.45 × 1) = 1.1 - 0.45 = 0.65R por operación.</p>
+          <p class="mt-3">Un EV positivo significa que tienes edge. 0.65R significa que por cada operación, esperas ganar 0.65R en el largo plazo.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Paso 3: Calcula el Sharpe Ratio</h2>
+          <p class="font-mono text-xs bg-white/5 p-3 rounded">Sharpe = (Retorno Promedio - Tasa Libre de Riesgo) / Desviación Estándar de los Retornos</p>
+          <p class="mt-3">Un Sharpe de 1.0+ es bueno. 2.0+ es excelente. Si tu Sharpe es menor a 0.5, estás tomando demasiado riesgo para las ganancias que obtienes.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Paso 4: Mide el impacto de cada herramienta</h2>
+          <p>Desglosa tu EV por herramienta. Por ejemplo:</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">Operaciones con GFlow PRO v2.0:</strong> 62% Win Rate, EV de 0.82R.</li>
+            <li><strong class="text-white">Operaciones con Nexus Trend Engine:</strong> 58% Win Rate, EV de 0.71R.</li>
+            <li><strong class="text-white">Operaciones impulsivas (sin herramienta):</strong> 22% Win Rate, EV de -0.45R.</li>
+          </ul>
+          <p class="mt-3">Este análisis te muestra <strong class="text-white">exactamente</strong> qué herramientas aportan valor y qué comportamientos te restan.</p>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <p class="text-sm text-gray-400">Si no puedes cuantificar tu edge, no tienes edge. La suite GP Trading te da las herramientas para construirlo. <a href="/#detalle" class="text-accent hover:underline">Empieza hoy</a>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

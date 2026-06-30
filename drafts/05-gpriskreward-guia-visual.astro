@@ -1,0 +1,58 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="GPRiskReward: Calcula tu riesgo en 3 segundos — Guía visual" description="Aprende a usar GPRiskReward para calcular tu tamaño de posición automáticamente en NinjaTrader 8. Guía visual paso a paso con Auto-Lotaje y OCO One-Click.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Herramientas</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 5 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">GPRiskReward: Calcula tu riesgo en 3 segundos — Guía visual</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">El Auto-Lotaje de GPRiskReward hace en segundos lo que antes te tomaba 5 minutos con una calculadora.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Paso 1: Define tu riesgo</h2>
+          <p>GPRiskReward te permite definir tu riesgo de 3 formas:</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">En dinero ($):</strong> "Quiero arriesgar $100 en esta operación".</li>
+            <li><strong class="text-white">En porcentaje (%):</strong> "Quiero arriesgar el 1% de mi cuenta".</li>
+            <li><strong class="text-white">En R (unidades de riesgo):</strong> "Quiero arriesgar 1R".</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Paso 2: Marca tu Stop Loss</h2>
+          <p>Haz clic en el nivel de precio donde quieres poner tu Stop Loss en el gráfico. GPRiskReward calcula la distancia en ticks y la muestra visualmente.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Paso 3: Auto-Lotaje instantáneo</h2>
+          <p>En menos de 1 segundo, GPRiskReward calcula el tamaño de posición exacto. Si arriesgas $100 y tu Stop está a 10 ticks en NQ, te dice: "2 contratos". Si mueves el Stop, se recalcula al instante.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Paso 4: OCO One-Click</h2>
+          <p>Un solo clic coloca tu entrada, Stop Loss y Take Profit simultáneamente. El sistema OCO (One Cancels Other) asegura que si una orden se ejecuta, la otra se cancela automáticamente.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Ejemplo práctico</h2>
+          <p>Operas NQ con una cuenta de $50,000. Quieres arriesgar 1% ($500). Marcas un Stop a 20 ticks. GPRiskReward calcula: 500 / (20 × $5) = 5 contratos. Un clic y estás dentro con TP y SL puestos.</p>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <p class="text-sm text-gray-400">Deja de calcular riesgo en Excel. <a href="/#detalle-riskreward" class="text-accent hover:underline">GPRiskReward</a> lo hace en tiempo real.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="Order Flow avanzado: Delta, Cumulative Delta y absorción" description="El Order Flow tiene métricas que van más allá del volumen. Aprende a usar Delta, Cumulative Delta y patrones de absorción para leer la intención del mercado.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Educación</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 7 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Order Flow avanzado: Delta, Cumulative Delta y absorción</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">El volumen es solo el principio. Delta, Cumulative Delta y absorción te muestran la verdadera intención detrás de cada movimiento.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Delta: la diferencia que importa</h2>
+          <p>Delta es la diferencia entre el volumen comprador y vendedor en cada tick o vela. Delta positiva = más compradores que vendedores. Delta negativa = más vendedores que compradores.</p>
+          <p class="mt-3">La clave está en la <strong class="text-white">divergencia</strong>: si el precio sube pero la Delta es negativa, la subida no tiene respaldo. Es una trampa alcista. Si el precio baja pero la Delta es positiva, es una trampa bajista. <strong class="text-white">GFlow Pro Premium</strong> muestra estas divergencias automáticamente.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Cumulative Delta</h2>
+          <p>La Cumulative Delta suma la Delta de cada vela desde el inicio de la sesión. Una Cumulative Delta creciente indica que los compradores están controlando la sesión. Decreciente, los vendedores.</p>
+          <p class="mt-3">Cuando la Cumulative Delta se aplana mientras el precio sigue moviéndose, el movimiento se está agotando. Es una de las señales más fiables de reversión.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Absorción: la huella institucional</h2>
+          <p>La absorción ocurre cuando el precio llega a una zona de liquidez (un muro de oferta o demanda) y en lugar de rebotar, se mantiene lateral con volumen alto. Las instituciones están absorbiendo la liquidez del muro.</p>
+          <p class="mt-3">Cuando ves absorción en un muro de oferta (precio lateral cerca de una resistencia con volumen alto), anticipa una ruptura alcista. <strong class="text-white">OmniFlow GFlow X</strong> con Kinetic Singularity detecta estos patrones automáticamente.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Poniéndolo todo junto</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">Delta + Cumulative Delta:</strong> Confirma la dirección de la sesión.</li>
+            <li><strong class="text-white">Absorción:</strong> Identifica zonas de posible ruptura.</li>
+            <li><strong class="text-white">Kinetic Singularity:</strong> Da el punto exacto de entrada.</li>
+          </ul>
+          <p class="mt-3">Esta combinación es la base del sistema de confluencia que usan los traders avanzados de GP Trading.</p>
+        </section>
+        <div class="p-4 bg-accent/5 border border-accent/10 rounded-xl">
+          <p class="text-xs text-gray-400">💡 La Delta y Cumulative Delta están integradas en <a href="/#detalle-gflowpro" class="text-accent hover:underline">GFlow Pro Premium</a> y versiones superiores.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

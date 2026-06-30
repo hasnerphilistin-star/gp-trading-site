@@ -1,0 +1,56 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="Gestión de posiciones: Pyramiding, Scaling y Trailing Stops" description="La entrada es solo el 10% del éxito. El 90% restante es cómo gestionas la posición abierta. Aprende pyramiding, scaling y trailing stops como un profesional.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Educación</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 6 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Gestión de posiciones: Pyramiding, Scaling y Trailing Stops</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">La mayoría de los traders se enfoca en la entrada y se olvida de lo que realmente importa: qué hacer después de estar dentro.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Pyramiding: sumar a ganadores</h2>
+          <p>Pyramiding consiste en agregar tamaño a una posición que ya está en ganancia. La idea es aumentar tu exposición cuando la tendencia se confirma. Regla de oro: <strong class="text-white">cada adición debe ser más pequeña que la anterior</strong>. Ejemplo: 4 contratos iniciales, luego 3, luego 2.</p>
+          <p class="mt-3">TradeSyncer PRO v2.0 permite configurar pyramiding automático con tamaño decreciente para múltiples cuentas.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Scaling: salir de a partes</h2>
+          <p>Scaling es lo opuesto: salir de una posición en partes. En lugar de tener un solo TP, divides tu posición en 2-4 objetivos. Ejemplo: 50% en TP1, 30% en TP2, 20% en TP3. Esto asegura ganancias parciales mientras dejas correr el resto.</p>
+          <p class="mt-3"><strong class="text-white">OmniFlow GFlow X</strong> y <strong class="text-white">GFlow PRO v2.0</strong> proyectan TP1-TP4 automáticamente basados en la liquidez del mercado, perfectos para scaling.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Trailing Stops: proteger ganancias</h2>
+          <p>Un trailing stop mueve el Stop Loss a medida que el precio se mueve a tu favor. Existen varios tipos: por ticks (mueve el stop X ticks detrás del precio), por porcentaje, o por niveles técnicos.</p>
+          <p class="mt-3"><strong class="text-white">GPRiskReward</strong> incluye trailing stop configurable que se ajusta automáticamente.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">La combinación ganadora</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">Entrada:</strong> Señal de confluencia (Nexus + GFlow + VWAP).</li>
+            <li><strong class="text-white">Ejecución:</strong> Auto-Lotaje con GPRiskReward + OCO One-Click.</li>
+            <li><strong class="text-white">Gestión:</strong> Scaling en TP1-TP4 + Trailing Stop en posición restante.</li>
+          </ul>
+        </section>
+        <div class="p-4 bg-accent/5 border border-accent/10 rounded-xl">
+          <p class="text-xs text-gray-400">💡 La gestión de posiciones es lo que separa a los traders consistentes de los que tienen un mal mes y lo pierden todo.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

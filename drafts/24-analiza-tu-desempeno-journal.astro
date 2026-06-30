@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="Cómo analizar tu propio desempeño: trade journal y métricas" description="Llevar un trade journal es la forma más rápida de mejorar como trader. Aprende qué registrar, cómo analizarlo y qué métricas realmente importan.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Educación</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 6 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Cómo analizar tu propio desempeño: trade journal y métricas</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">Si no mides tu desempeño, no puedes mejorarlo. Un trade journal bien llevado es la diferencia entre estancarte y evolucionar.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Por qué llevar un trade journal?</h2>
+          <p>El 90% de los traders no lleva un registro de sus operaciones. El 10% que lo hace mejora el doble de rápido. ¿Por qué? Porque <strong class="text-white">no puedes arreglar lo que no mides</strong>. Un journal te muestra patrones que a simple vista no ves: qué días operas mejor, en qué timeframes eres más rentable, qué errores repites.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Qué registrar en cada operación</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">Fecha, hora, instrumento:</strong> Datos básicos.</li>
+            <li><strong class="text-white">Setup / Señal:</strong> ¿Qué herramienta te dio la entrada? (GFlow, Nexus, VWAP, etc.)</li>
+            <li><strong class="text-white">Timeframe de entrada:</strong> 1m, 5m, 15m, etc.</li>
+            <li><strong class="text-white">Riesgo asumido ($ o %):</strong> ¿Respetaste tu plan de riesgo?</li>
+            <li><strong class="text-white">Resultado:</strong> Ganancia/pérdida en ticks, $ y R.</li>
+            <li><strong class="text-white">Emoción pre-entrada:</strong> ¿Confianza, duda, ansiedad?</li>
+            <li><strong class="text-white">Error (si aplica):</strong> ¿Te saltaste una regla? ¿Entraste sin señal?</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Métricas clave a revisar semanalmente</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">Win Rate semanal:</strong> ¿Está dentro de tu rango esperado?</li>
+            <li><strong class="text-white">R:R promedio:</strong> ¿Estás manteniendo tu ratio objetivo?</li>
+            <li><strong class="text-white">Drawdown máximo:</strong> ¿Alguna operación se fue de控制?</li>
+            <li><strong class="text-white">Operaciones fuera de plan:</strong> El número más importante. Tiende a cero.</li>
+            <li><strong class="text-white">Mejor herramienta de la semana:</strong> ¿GFlow, Nexus, Specter? Duplica lo que funciona.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Ejemplo de análisis semanal</h2>
+          <p>"Esta semana hice 12 operaciones. 7 fueron con señal de GFlow PRO v2.0 (5 ganadoras), 3 con Nexus (2 ganadoras), 2 impulsivas fuera de plan (0 ganadoras). Conclusión: las operaciones fuera de plan siempre pierden. La semana que viene: cero operaciones sin señal."</p>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <p class="text-sm text-gray-400">Un journal no miente. Te dice exactamente qué estás haciendo mal. La suite GP Trading te da las señales, el journal te dice si las estás respetando.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

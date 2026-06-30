@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="Cómo funciona el mercado de futuros: participantes, horarios y sesiones" description="Guía completa del mercado de futuros: quiénes participan, horarios de las sesiones globales y cómo cada sesión afecta la liquidez y volatilidad de los contratos.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Educación</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 7 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Cómo funciona el mercado de futuros: participantes, horarios y sesiones</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">El mercado de futuros no duerme. Pero no todas las horas son iguales. Conoce a los participantes y los momentos clave.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Los participantes del mercado de futuros</h2>
+          <p>El mercado de futuros tiene 3 grandes grupos de participantes. Cada uno opera con objetivos distintos y deja una huella diferente en el Order Flow:</p>
+          <ul class="list-disc pl-6 space-y-2 mt-3">
+            <li><strong class="text-white">Hedgers:</strong> Productores y consumidores que usan futuros para cubrir riesgo. Ej: una aerolínea compra petróleo para fijar precio.</li>
+            <li><strong class="text-white">Institucionales:</strong> Fondos de inversión, bancos y market makers. Mueven volúmenes enormes y operan con algoritmos.</li>
+            <li><strong class="text-white">Minoristas:</strong> Traders individuales como nosotros. Somos una fracción del volumen total.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Las 3 sesiones principales</h2>
+          <h3 class="text-lg font-bold text-accent mb-2">Sesión Asiática (19:00 - 4:00 ET)</h3>
+          <p>Baja volatilidad en índices americanos. El Nikkei y el Hang Seng son los protagonistas. Ideal para operar pares de divisas con el yen.</p>
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">Sesión Europea (3:00 - 12:00 ET)</h3>
+          <p>Londres abre y la volatilidad despierta. Es la sesión con mayor volumen en forex y materias primas. El oro y el petróleo se mueven fuerte en este horario.</p>
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">Sesión Americana (9:30 - 16:00 ET)</h3>
+          <p>La reina de la volatilidad. La apertura de Wall Street es el momento de mayor volumen del día. NQ y ES se disparan en los primeros 30 minutos. <strong class="text-white">Este es tu horario si usas herramientas de Order Flow.</strong></p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Cuándo operar cada contrato</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">NQ / ES:</strong> 9:30 AM - 12:00 PM ET (máxima liquidez)</li>
+            <li><strong class="text-white">CL (Crudo):</strong> 9:30 AM - 11:00 AM ET y reportes semanales</li>
+            <li><strong class="text-white">GC (Oro):</strong> 8:00 AM - 11:00 AM ET (solapamiento Londres-NY)</li>
+            <li><strong class="text-white">6E (Euro):</strong> 3:00 AM - 12:00 PM ET (sesión europea)</li>
+          </ul>
+        </section>
+        <div class="p-4 bg-gold/5 border border-gold/10 rounded-xl">
+          <p class="text-xs text-gray-400">⏰ Consejo: Opera las primeras 2 horas después de la apertura de NY. Es donde ocurre el 70% de los movimientos direccionales del día.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

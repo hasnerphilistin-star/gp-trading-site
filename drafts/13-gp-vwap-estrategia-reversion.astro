@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="GP VWAP Clásico — Estrategia de reversión en bandas de desviación" description="Estrategia completa para operar reversiones con GP VWAP Clásico. Usa las bandas +2σ y -2σ para identificar sobrecompra y sobreventa estadística con divergencia.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Herramientas</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 5 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">GP VWAP Clásico — Estrategia de reversión en bandas de desviación</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">Las bandas de desviación del VWAP son zonas de alta probabilidad de reversión. Aquí una estrategia paso a paso para operarlas con GP VWAP Clásico.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">La teoría: ¿por qué funcionan las bandas?</h2>
+          <p>Cuando el precio se extiende más allá de +2σ (dos desviaciones estándar por encima del VWAP), está estadísticamente sobrecomprado. En −2σ, sobrevendido. El precio tiende a volver al VWAP (regresión a la media). Pero no todas las extensiones son reversibles: la clave está en la <strong class="text-white">divergencia</strong> con el volumen.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Reglas de entrada</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Espera a que el precio toque +2σ o −2σ.</li>
+            <li>Busca divergencia: el volumen debe estar disminuyendo mientras el precio se extiende.</li>
+            <li>Entra cuando el precio muestre rechazo (vela con sombra larga en la dirección opuesta).</li>
+            <li>Stop Loss: más allá del extremo de la extensión + 1 tick.</li>
+            <li>Take Profit: en el VWAP (primer objetivo) o −1σ/ +1σ (segundo objetivo).</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Ejemplo en NQ</h2>
+          <p>NQ toca +2σ con volumen decreciente. Ves una vela de rechazo bajista. Entras corto con Stop 2 ticks arriba del extremo. TP1 en VWAP (10 ticks), TP2 en −1σ (18 ticks). La operación se resuelve en 15 minutos con 12 ticks de ganancia.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">GP VWAP Clásico + GFlow Pro Premium</h2>
+          <p>La combinación perfecta: GP VWAP Clásico te da las zonas de reversión estadística. GFlow Pro Premium confirma con Order Flow si hay absorción o rechazo real en esas zonas. Cuando ambos coinciden, la probabilidad de éxito es máxima.</p>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <p class="text-sm text-gray-400">Opera reversiones con base estadística. <a href="/#detalle-vpwap" class="text-accent hover:underline">GP VWAP Clásico</a>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

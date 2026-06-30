@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout title="Nexus Trend Engine — Cómo detectar tendencias antes del breakout" description="Nexus Trend Engine combina momentum, volumen y estructura de mercado para identificar tendencias antes de que rompan. Estrategia para entrar al inicio del movimiento.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Herramientas</span>
+        <span id="publish-date">Hoy</span>
+        <span>· 6 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Nexus Trend Engine — Cómo detectar tendencias antes del breakout</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">Nexus Trend Engine analiza 3 capas simultáneamente para detectar tendencias incipientes. Aquí la estrategia para entrar antes del breakout.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">El problema de los breakouts falsos</h2>
+          <p>El 70% de los breakouts son falsos. El precio rompe una resistencia, los traders minoristas entran largos, y el precio revierte barriendo los stops. Nexus Trend Engine resuelve esto analizando si el breakout tiene <strong class="text-white">respaldo real</strong> de las 3 capas.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Las 3 señales previas al breakout</h2>
+          <h3 class="text-lg font-bold text-accent mb-2">1. Compresión de momentum</h3>
+          <p>Antes de un breakout, el momentum se comprime. Las velas se vuelven más pequeñas, el rango se reduce. Nexus Trend Engine detecta esta compresión como señal de que el mercado se está preparando para un movimiento grande.</p>
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">2. Contracción de volumen</h3>
+          <p>El volumen disminuye durante la compresión, indicando que el mercado está en equilibrio. Cuando el volumen empieza a expandirse de nuevo, es la señal de que el equilibrio se rompe.</p>
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">3. Ruptura de estructura</h3>
+          <p>Nexus Trend Engine marca el momento exacto en que el precio rompe la estructura de mercado (máximos/mínimos del rango de compresión) con volumen creciente.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Estrategia de entrada</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Espera a que Nexus Trend Engine muestre las 3 flechas verdes (momentum, volumen, estructura).</li>
+            <li>Entra en la ruptura del rango de compresión.</li>
+            <li>Stop Loss: debajo del mínimo del rango de compresión.</li>
+            <li>Objetivo: extensión del rango previo (medir el ancho del rango y proyectarlo).</li>
+          </ul>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <p class="text-sm text-gray-400">¿Cansado de breakouts falsos? <a href="/#detalle-nexus" class="text-accent hover:underline">Nexus Trend Engine</a> filtra el ruido.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>
