@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /api/
+Disallow: /_headers
+Disallow: /.well-known/
+Sitemap: https://gptradingfx.pages.dev/sitemap.xml

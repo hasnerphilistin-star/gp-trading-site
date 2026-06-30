@@ -1,0 +1,4 @@
+Contact: mailto:gptradingacademy@proton.me
+Preferred-Languages: es, en
+Encryption: https://gptradingfx.pages.dev/.well-known/security.txt
+Policy: https://gp-trading.pages.dev/privacidad

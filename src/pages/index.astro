@@ -1,0 +1,104 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ProductsSection from '../components/ProductsSection.astro';
+import VideoCarousel from '../components/VideoCarousel.astro';
+import Pricing from '../components/Pricing.astro';
+import ComboPricing from '../components/ComboPricing.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout>
+  <Header />
+  <div id="main-content">
+    <Hero />
+    <ProductsSection />
+    <VideoCarousel />
+    <Pricing />
+    <ComboPricing />
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="text-center mb-12">
+        <span class="inline-block px-4 py-1.5 text-xs font-mono text-accent bg-accent/10 border border-accent/20 rounded-full mb-4">
+          Blog
+        </span>
+        <h2 class="text-2xl md:text-4xl font-bold tracking-tight">
+          Últimos del <span class="gradient-text">Blog</span>
+        </h2>
+        <p class="text-gray-400 mt-3 max-w-xl mx-auto">
+          Tutoriales, guías y análisis sobre Order Flow, SMC y las herramientas de la suite.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/blog/tradesyncer-pro-v2-guia-completa" class="glass-card p-6 group hover:ring-1 hover:ring-accent/30 transition-all flex flex-col">
+          <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+            <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Herramientas</span>
+            <span>30 Jun 2026</span>
+          </div>
+          <h3 class="font-bold text-white group-hover:text-accent transition-colors mb-2">TradeSyncer PRO v2.0</h3>
+          <p class="text-sm text-gray-400 leading-relaxed flex-1">Copia trades en tiempo real entre cuentas con latencia ultra baja y sincronización bidireccional.</p>
+          <span class="mt-4 text-sm font-semibold text-accent group-hover:gap-2 inline-flex items-center gap-1 transition-all">Leer artículo <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a href="/blog/errores-al-copiar-trades-y-como-evitarlos" class="glass-card p-6 group hover:ring-1 hover:ring-accent/30 transition-all flex flex-col">
+          <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+            <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Educación</span>
+            <span>30 Jun 2026</span>
+          </div>
+          <h3 class="font-bold text-white group-hover:text-accent transition-colors mb-2">Los 3 errores al copiar trades</h3>
+          <p class="text-sm text-gray-400 leading-relaxed flex-1">Descubre los fallos más frecuentes al copiar trades y cómo evitarlos para mantener sincronización perfecta.</p>
+          <span class="mt-4 text-sm font-semibold text-accent group-hover:gap-2 inline-flex items-center gap-1 transition-all">Leer artículo <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a href="/blog/gp-firm-copier-pro-guia" class="glass-card p-6 group hover:ring-1 hover:ring-accent/30 transition-all flex flex-col">
+          <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+            <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Herramientas</span>
+            <span>30 Jun 2026</span>
+          </div>
+          <h3 class="font-bold text-white group-hover:text-accent transition-colors mb-2">GP Firm Copier Pro</h3>
+          <p class="text-sm text-gray-400 leading-relaxed flex-1">Copia trades a 20+ cuentas de prop firms con Daily Loss Limit individual y panel unificado.</p>
+          <span class="mt-4 text-sm font-semibold text-accent group-hover:gap-2 inline-flex items-center gap-1 transition-all">Leer artículo <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a href="/blog/omniflow-gflow-x-guia" class="glass-card p-6 group hover:ring-1 hover:ring-accent/30 transition-all flex flex-col">
+          <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+            <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Herramientas</span>
+            <span>30 Jun 2026</span>
+          </div>
+          <h3 class="font-bold text-white group-hover:text-accent transition-colors mb-2">OmniFlow GFlow X</h3>
+          <p class="text-sm text-gray-400 leading-relaxed flex-1">Kinetic Singularity, proyecciones TP1-TP4 y panel HUD inteligente para Order Flow de rango medio.</p>
+          <span class="mt-4 text-sm font-semibold text-accent group-hover:gap-2 inline-flex items-center gap-1 transition-all">Leer artículo <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a href="/blog/volume-profile-huella-institucional" class="glass-card p-6 group hover:ring-1 hover:ring-accent/30 transition-all flex flex-col">
+          <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+            <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Educación</span>
+            <span>30 Jun 2026</span>
+          </div>
+          <h3 class="font-bold text-white group-hover:text-accent transition-colors mb-2">Volume Profile</h3>
+          <p class="text-sm text-gray-400 leading-relaxed flex-1">Aprende a leer el POC, Value Area y la huella institucional en tiempo real con Volume Profile.</p>
+          <span class="mt-4 text-sm font-semibold text-accent group-hover:gap-2 inline-flex items-center gap-1 transition-all">Leer artículo <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a href="/blog/omniflow-quantum-prime-guia" class="glass-card p-6 group hover:ring-1 hover:ring-accent/30 transition-all flex flex-col">
+          <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+            <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Herramientas</span>
+            <span>30 Jun 2026</span>
+          </div>
+          <h3 class="font-bold text-white group-hover:text-accent transition-colors mb-2">OmniFlow Quantum Prime</h3>
+          <p class="text-sm text-gray-400 leading-relaxed flex-1">El algoritmo paramétrico definitivo para scalping con precisión milimétrica en timeframes pequeños.</p>
+          <span class="mt-4 text-sm font-semibold text-accent group-hover:gap-2 inline-flex items-center gap-1 transition-all">Leer artículo <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/blog" class="inline-flex items-center gap-2 px-6 py-4 text-sm font-semibold text-primary bg-accent rounded-full hover:bg-accent-400 transition-all min-h-[44px]">
+          Ver todos los artículos
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </section>
+  </div>
+  <Footer />
+</Layout>

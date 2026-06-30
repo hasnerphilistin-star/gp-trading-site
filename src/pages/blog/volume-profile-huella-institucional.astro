@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Volume Profile — Cómo leer la huella institucional en tiempo real" description="El Volume Profile es la herramienta que usan los traders institucionales para entender dónde está el verdadero valor del mercado. Aprende a leerlo en NinjaTrader 8 con GP Trading.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Educación</span>
+        <span>30 Jun 2026</span>
+        <span>· 7 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Volume Profile: Cómo leer la huella institucional en tiempo real</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">El Volume Profile es la herramienta más infravalorada por los traders minoristas. Aquí te enseñamos a usarla como lo hacen las instituciones.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Qué es el Volume Profile?</h2>
+          <p>El Volume Profile es una representación gráfica del volumen negociado en cada nivel de precio durante un período de tiempo. A diferencia del volumen tradicional (que se muestra en la parte inferior como un histograma temporal), el Volume Profile te muestra <strong class="text-white">qué niveles de precio concentraron la mayor actividad</strong>.</p>
+          <p class="mt-3">Esto es crucial porque el precio no es aleatorio: tiende a moverse hacia donde hay liquidez y a rechazar zonas sin interés. El Volume Profile revela exactamente dónde está esa liquidez.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Los componentes clave del Volume Profile</h2>
+          <h3 class="text-lg font-bold text-accent mb-2">Point of Control (POC)</h3>
+          <p>Es el nivel de precio donde se negoció el mayor volumen durante la sesión. El POC actúa como un imán: el precio tiende a volver a este nivel. Si el precio está por encima del POC, el sesgo es alcista. Por debajo, bajista.</p>
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">Value Area High (VAH) y Value Area Low (VAL)</h3>
+          <p>El rango donde se negoció el 70% del volumen total. Fuera de esta zona, el volumen es escaso, lo que significa que el precio se mueve rápido pero sin soporte. Las operaciones de alta probabilidad suelen ejecutarse dentro del Value Area.</p>
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">Alta Concentración</h3>
+          <p>Cuando el Volume Profile muestra una forma de "P" (alta concentración arriba) o "b" (alta concentración abajo), indica que el mercado está rechazando esos niveles. Esto es útil para identificar zonas de reversión.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Cómo usar el Volume Profile en tu operativa</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">Soporte y resistencia dinámicos:</strong> Usa VAH y VAL como niveles de soporte/resistencia del día.</li>
+            <li><strong class="text-white">Confirmación de rupturas:</strong> Un breakout del Value Area con volumen creciente es válido. Sin volumen, es una trampa.</li>
+            <li><strong class="text-white">Reversiones en el POC:</strong> Cuando el precio toca el POC y rebota, es una oportunidad de entrada de alta probabilidad.</li>
+            <li><strong class="text-white">Negocio justo e injusto:</strong> Las zonas de bajo volumen (bajo la campana) son áreas de "precio injusto" a las que el precio tiende a volver.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Volume Profile en GP Trading</h2>
+          <p>Todas nuestras herramientas de Order Flow incluyen Volume Profile nativo de sesión:</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">GFlow Pro Premium</strong> — Volume Profile básico con mapa de calor de liquidez.</li>
+            <li><strong class="text-white">OmniFlow GFlow X</strong> — Volume Profile + Kinetic Singularity + TP1-TP4.</li>
+            <li><strong class="text-white">OmniFlow GFlow PRO v2.0</strong> — Volume Profile avanzado en HUD Direct2D con Modo Dios.</li>
+          </ul>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <p class="text-sm text-gray-400">El Volume Profile es una habilidad que todo trader profesional debe dominar. <a href="/#detalle-gflowpro" class="text-accent hover:underline">Empieza con GFlow Pro Premium</a> y lleva tu análisis al siguiente nivel.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

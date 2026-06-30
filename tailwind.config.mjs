@@ -1,0 +1,55 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#0a0a0a',
+          50: '#f6f6f6',
+          100: '#e7e7e7',
+          200: '#d1d1d1',
+          300: '#b0b0b0',
+          400: '#888888',
+          500: '#6d6d6d',
+          600: '#5d5d5d',
+          700: '#4f4f4f',
+          800: '#454545',
+          900: '#3d3d3d',
+          950: '#0a0a0a',
+        },
+        accent: {
+          DEFAULT: '#00d4aa',
+          50: '#e6fff6',
+          100: '#b3ffe6',
+          200: '#80ffd5',
+          300: '#4dffc4',
+          400: '#1affb4',
+          500: '#00d4aa',
+          600: '#00a888',
+          700: '#007c66',
+          800: '#005044',
+          900: '#002422',
+        },
+        gold: {
+          DEFAULT: '#f59e0b',
+          50: '#fffbeb',
+          100: '#fef3c7',
+          200: '#fde68a',
+          300: '#fcd34d',
+          400: '#fbbf24',
+          500: '#f59e0b',
+          600: '#d97706',
+          700: '#b45309',
+          800: '#92400e',
+          900: '#78350f',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+    },
+  },
+  plugins: [],
+};

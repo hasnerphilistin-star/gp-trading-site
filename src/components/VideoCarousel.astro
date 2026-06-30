@@ -1,0 +1,544 @@
+---
+const products = [
+  {
+    id: 'tradesyncer',
+    name: 'TradeSyncer PRO v2.0',
+    category: 'Copiado y Riesgo',
+    price: '$599',
+    desc: 'Motor de copiado definitivo para escalabilidad masiva en cuentas de fondeo.',
+    tags: ['Multiplicación Precisa', 'Daily Loss Limit', 'Resincronización Inteligente'],
+    color: '#00d4aa',
+    video: 'j-NFvLtKLno',
+    duration: 149
+  },
+  {
+    id: 'firmcopier',
+    name: 'GP Firm Copier Pro',
+    category: 'Copiado y Riesgo',
+    price: '$249',
+    desc: 'Panel de control interactivo para administrar múltiples cuentas Master/Slave.',
+    tags: ['Cierre de Pánico', 'Métricas en Tiempo Real', 'Sync Live'],
+    color: '#00d4aa',
+    video: 'gNL6cWLvt9Q',
+    duration: 74
+  },
+  {
+    id: 'riskreward',
+    name: 'GPRiskReward',
+    category: 'Copiado y Riesgo',
+    price: '$149',
+    desc: 'Asistente de gestión monetaria y francotirador bracket de un solo clic.',
+    tags: ['Auto-Lotaje', 'Ejecución OCO', 'UI R:R Dinámica'],
+    color: '#00d4aa',
+    video: 'co7Pz3ooLSI',
+    duration: 54
+  },
+  {
+    id: 'gflowpromaster',
+    name: 'OmniFlow GFlow PRO v2.0',
+    category: 'Order Flow',
+    price: '$699',
+    desc: 'IA, SMC y Cinética pura en un solo panel. El arma definitiva de la suite.',
+    tags: ['Modo Dios', 'Zonas Verificadas', 'Radiación Cinética'],
+    color: '#00d4aa',
+    video: 'xqATJB8Hpak',
+    duration: 108
+  },
+  {
+    id: 'gflowx',
+    name: 'OmniFlow GFlow X',
+    category: 'Order Flow',
+    price: '$499',
+    desc: 'La ventaja matemática enzimática. Mapa de calor institucional con Kinetic Singularity.',
+    tags: ['Modo Dios', 'TP1-TP4 Auto', 'Direct2D'],
+    color: '#00d4aa',
+    video: 'KDofJ-ADrJo',
+    duration: 69
+  },
+  {
+    id: 'quantumprime',
+    name: 'OmniFlow Quantum Prime',
+    category: 'Order Flow',
+    price: '$349',
+    desc: 'Convergencia entre GPVWAP Multidimensional y SMC Order Flow.',
+    tags: ['Nubes VWAP', 'Bandas Zonales', 'Cruce Cuántico'],
+    color: '#f59e0b',
+    video: 'tuu_e2BXaMI',
+    duration: 74
+  },
+  {
+    id: 'gflowpro',
+    name: 'GFlow Pro Premium',
+    category: 'Order Flow',
+    price: '$300',
+    desc: 'Mapa de calor base de liquidez institucional con Volume Profile.',
+    tags: ['Muros Inst.', 'Volume Profile', 'Order Flow'],
+    color: '#f59e0b',
+    video: 'Mce88WjenQM',
+    duration: 69
+  },
+  {
+    id: 'vpwap',
+    name: 'GP VWAP Clásico',
+    category: 'Order Flow',
+    price: '$99',
+    desc: 'Anclaje puro de precio ponderado por volumen.',
+    tags: ['Perfiles D/W/M', 'Desviación Din.', 'Render Ligero'],
+    color: '#f59e0b',
+    video: '4ncuwWvAPJ0',
+    duration: 69
+  },
+  {
+    id: 'nexus',
+    name: 'Nexus Trend Engine',
+    category: 'Tendencial',
+    price: '$199',
+    desc: 'Nube de impulso visual optimizada por Volumen.',
+    tags: ['HMA+EMA+ATR', 'Volumen Anómalo', 'Retesteo'],
+    color: '#00d4aa',
+    video: 'w1DafQmpcGw',
+    duration: 37
+  },
+  {
+    id: 'specter',
+    name: 'Specter Trend Cloud',
+    category: 'Tendencial',
+    price: '$199',
+    desc: 'Arquitectura camaleónica y láser de Breakouts algorítmicos.',
+    tags: ['SMA/EMA/WMA', 'Láser Dinámico', 'Alertas Breakout'],
+    color: '#f59e0b',
+    video: '3VWUiaWo748',
+    duration: 67
+  },
+  {
+    id: 'gpcuantum',
+    name: 'GPCuantum X',
+    category: 'Tendencial',
+    price: '$149',
+    desc: 'Ajuste dinámico fractal inmune al ruido lateral basado en FRAMA.',
+    tags: ['FRAMA Adapt.', 'Señales Visuales', 'Iluminación Velas'],
+    color: '#f59e0b',
+    video: '4g_3zghj2lA',
+    duration: 69
+  }
+];
+---
+
+<section id="detalle" class="relative py-16 md:py-32 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.015] to-transparent pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-1.5 text-xs font-mono text-accent bg-accent/10 border border-accent/20 rounded-full mb-4">
+        Video Detalle
+      </span>
+      <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-4 animate-slide-up">
+        Cada Indicador en <span class="gradient-text">Acción</span>
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.1s;">
+        Mockups interactivos de cada herramienta. Desliza para ver todos los productos.
+      </p>
+    </div>
+
+    <div class="max-w-5xl mx-auto" data-carousel role="region" aria-label="Carrusel de indicadores" aria-roledescription="carousel">
+      <!-- Main Carousel -->
+      <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-accent/5 group" data-carousel-container>
+        <div class="flex carousel-track" data-carousel-track role="group" aria-roledescription="slide">
+          {
+            products.map((p, i) => (
+              <div class="carousel-slide w-full shrink-0 relative" data-slide={p.id} data-duration={p.duration || 8} role="group" aria-roledescription="slide" aria-label={`Producto ${i + 1} de ${products.length}: ${p.name}`}>
+                <div class="relative aspect-video bg-[#0a0a0a] overflow-hidden">
+                  {p.video ? (
+                    <>
+                      <iframe
+                        data-video-slide={p.id}
+                        src={`https://www.youtube.com/embed/${p.video}?autoplay=1&mute=1&loop=0&controls=0&showinfo=0&modestbranding=1&iv_load_policy=3&rel=0&disablekb=1&playsinline=1&enablejsapi=1`}
+                        allow="autoplay; encrypted-media"
+                        class="absolute inset-0 w-full h-full"
+                        loading="eager"
+                        title={`Video de ${p.name}`}
+                      ></iframe>
+                      <div class="video-blocker absolute inset-0 bg-[#0a0a0a]" style="cursor:default; z-index:9999 !important; pointer-events:all !important;" data-video-blocker={p.id}></div>
+                    </>
+                  ) : (
+                    <>
+                      <!-- Grid Background -->
+                      <svg class="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 1920 1080" aria-hidden="true">
+                        <defs>
+                          <pattern id={`grid-${i}`} width="80" height="80" patternUnits="userSpaceOnUse">
+                            <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#00d4aa" stroke-width="0.5" opacity="0.3"/>
+                          </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill={`url(#grid-${i})`} />
+                      </svg>
+
+                      <!-- Chart Area -->
+                      <div class="absolute inset-0 flex items-center justify-center px-4 md:px-8 lg:px-16">
+                        <div class="w-full max-w-3xl">
+                          <svg viewBox="0 0 800 300" class="w-full opacity-60" aria-hidden="true">
+                            <defs>
+                              <linearGradient id={`up-${i}`} x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#00d4aa"/>
+                                <stop offset="100%" stop-color="#00d4aa" stop-opacity="0.3"/>
+                              </linearGradient>
+                              <linearGradient id={`down-${i}`} x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
+                                <stop offset="100%" stop-color="#f59e0b"/>
+                              </linearGradient>
+                            </defs>
+                            {Array.from({length: 60}).map((_, ci) => (
+                              <rect key={ci} x={20 + ci * 13} y={60 + Math.sin(ci * 0.3) * 60 + Math.random() * 20} width="7" height={80 + Math.sin(ci * 0.5) * 40} fill={Math.random() > 0.4 ? `url(#up-${i})` : `url(#down-${i})`} opacity="0.5" rx="1"/>
+                            ))}
+                            <path d="M0 150 Q200 130 400 150 Q600 120 800 140" fill="none" stroke="#00d4aa" stroke-width="1.5" opacity="0.4" stroke-dasharray="6,3"/>
+                            <text x="20" y="30" fill="#00d4aa" font-size="12" font-family="JetBrains Mono, monospace" opacity="0.6">{(p.tags[0] || '').toUpperCase()}</text>
+                            <text x="580" y="270" fill="#f59e0b" font-size="12" font-family="JetBrains Mono, monospace" opacity="0.6">{(p.tags[1] || '').toUpperCase()}</text>
+                          </svg>
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  <!-- Product Info Overlay -->
+                  <div class="absolute top-4 left-4 right-4 flex flex-wrap items-center gap-2 z-10">
+                    <span class="px-2 py-1 text-xs font-mono text-accent bg-accent/10 border border-accent/20 rounded-full">{p.category}</span>
+                    <span class="px-2 py-1 text-xs font-mono font-bold text-accent bg-accent/10 border border-accent/30 rounded-full">{p.price} USD</span>
+                  </div>
+
+                  <!-- Bottom Bar -->
+                  <div class="absolute bottom-0 left-0 right-0 h-14 md:h-18 bg-gradient-to-r from-primary via-primary/95 to-primary/80 border-t border-white/5 backdrop-blur-xl z-10">
+                    <div class="h-full px-4 md:px-6 lg:px-10 flex items-center justify-between min-h-[56px]">
+                      <div class="flex items-center gap-2 min-w-0 flex-1">
+                        <img src="/logo.svg" alt="GP Trading" class="h-6 w-6 md:h-7 md:w-7 shrink-0" />
+                        <div class="min-w-0">
+                          <span class="text-xs md:text-sm font-bold tracking-tight truncate block">GP <span class="text-accent">Trading</span></span>
+                          <p class="text-[10px] md:text-xs text-gray-500 font-mono truncate block -mt-0.5">{p.name}</p>
+                        </div>
+                      </div>
+                      <div class="flex items-center gap-2 shrink-0">
+                        <span class="hidden sm:block text-[10px] md:text-xs text-gray-500 mr-2 truncate max-w-[180px]">{p.desc}</span>
+                        <span class="w-1.5 h-1.5 bg-accent rounded-full animate-pulse shrink-0"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        <!-- Arrows -->
+        <button data-carousel-prev class="absolute left-1.5 md:left-3 top-1/2 -translate-y-1/2 z-[10000] w-8 h-8 md:w-10 md:h-10 min-w-[44px] min-h-[44px] rounded-full bg-black/60 md:bg-primary/90 backdrop-blur border border-white/10 flex items-center justify-center text-white hover:bg-accent hover:text-primary transition-all focus-visible-ring" aria-label="Producto anterior" type="button">
+          <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button data-carousel-next class="absolute right-1.5 md:right-3 top-1/2 -translate-y-1/2 z-[10000] w-8 h-8 md:w-10 md:h-10 min-w-[44px] min-h-[44px] rounded-full bg-black/60 md:bg-primary/90 backdrop-blur border border-white/10 flex items-center justify-center text-white hover:bg-accent hover:text-primary transition-all focus-visible-ring" aria-label="Siguiente producto" type="button">
+          <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- Dots / Thumbnails -->
+      <div class="flex items-center justify-center gap-1 md:gap-1.5 mt-6 px-2" role="tablist" aria-label="Indicadores de productos">
+        {products.map((p, i) => (
+          <button data-carousel-dot={i} data-target={p.id} role="tab" aria-label={`Ir a ${p.name}`} aria-selected={i === 0} class="carousel-dot w-7 h-7 md:w-8 md:h-8 rounded-full bg-white/10 hover:bg-accent/40 transition-all focus-visible-ring flex items-center justify-center shrink-0" aria-controls={`slide-${p.id}`}><span class="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-white/40 transition-all duration-300"></span></button>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function() {
+    'use strict';
+    
+    const carousel = document.querySelector('[data-carousel]');
+    if (!carousel) return;
+
+    const track = carousel.querySelector('[data-carousel-track]');
+    const slides = track?.querySelectorAll('[data-slide]');
+    const dots = carousel.querySelectorAll('[data-carousel-dot]');
+    const prevBtn = carousel.querySelector('[data-carousel-prev]');
+    const nextBtn = carousel.querySelector('[data-carousel-next]');
+    const container = carousel.querySelector('[data-carousel-container]');
+    
+    if (!track || !slides?.length || !dots?.length || !prevBtn || !nextBtn) return;
+
+    let currentIndex = 0;
+    let isAnimating = false;
+    let isAutoPlaying = false;
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+
+    function goTo(index, skipScroll = false) {
+      if (isAnimating || index < 0 || index >= slides.length) return;
+      
+      isAnimating = true;
+      currentIndex = index;
+      
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      
+      dots.forEach((dot, i) => {
+        const isActive = i === currentIndex;
+        dot.dataset.active = isActive ? 'true' : 'false';
+        dot.classList.toggle('active', isActive);
+        dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      
+      slides.forEach((slide, i) => {
+        slide.setAttribute('aria-hidden', i !== currentIndex ? 'true' : 'false');
+      });
+
+      setTimeout(() => { isAnimating = false; }, 500);
+      
+      if (!skipScroll && !isAutoPlaying) {
+        carousel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function next() {
+      goTo(currentIndex < slides.length - 1 ? currentIndex + 1 : 0, true);
+    }
+
+    function prev() {
+      goTo(currentIndex > 0 ? currentIndex - 1 : slides.length - 1, true);
+    }
+
+    prevBtn?.addEventListener('click', function(e) {
+      e.preventDefault();
+      isAutoPlaying = false;
+      prev();
+      isAutoPlaying = true;
+    });
+
+    nextBtn?.addEventListener('click', function(e) {
+      e.preventDefault();
+      isAutoPlaying = false;
+      next();
+      isAutoPlaying = true;
+    });
+
+    dots.forEach(function(dot, i) {
+      dot.addEventListener('click', function(e) {
+        e.preventDefault();
+        isAutoPlaying = false;
+        goTo(i);
+        isAutoPlaying = true;
+      });
+      
+      dot.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          isAutoPlaying = false;
+          goTo(i);
+          isAutoPlaying = true;
+        }
+      });
+    });
+
+    function handleHash() {
+      var hash = window.location.hash;
+      if (hash.startsWith('#detalle-')) {
+        var targetId = hash.replace('#detalle-', '');
+        var slideIndex = Array.from(slides).findIndex(function(s) { return s.dataset.slide === targetId; });
+        if (slideIndex >= 0) {
+          isAutoPlaying = false;
+          carousel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          setTimeout(function() {
+            goTo(slideIndex, true);
+            isAutoPlaying = true;
+          }, 400);
+        }
+      }
+    }
+
+    window.addEventListener('hashchange', handleHash);
+    handleHash();
+
+    // Intercept "Ver detalle" clicks globally
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[href^="#detalle-"]');
+      if (link) {
+        e.preventDefault();
+        var targetId = link.getAttribute('href').replace('#detalle-', '');
+        var slideIndex = Array.from(slides).findIndex(function(s) { return s.dataset.slide === targetId; });
+        if (slideIndex >= 0) {
+          isAutoPlaying = false;
+          carousel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          setTimeout(function() {
+            goTo(slideIndex, true);
+            isAutoPlaying = true;
+          }, 400);
+        }
+        // Update URL hash without triggering hashchange
+        history.pushState(null, '', link.getAttribute('href'));
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') { isAutoPlaying = false; prev(); isAutoPlaying = true; }
+      if (e.key === 'ArrowRight') { isAutoPlaying = false; next(); isAutoPlaying = true; }
+    });
+
+    // Touch swipe support - improved with threshold and direction detection
+    if (container) {
+      container.addEventListener('touchstart', function(e) {
+        if (e.touches.length === 1) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        }
+      }, { passive: true });
+
+      container.addEventListener('touchmove', function(e) {
+        if (e.touches.length === 1) {
+          touchEndX = e.touches[0].clientX;
+          touchEndY = e.touches[0].clientY;
+        }
+      }, { passive: true });
+
+      container.addEventListener('touchend', function(e) {
+        var diffX = touchStartX - touchEndX;
+        var diffY = touchStartY - touchEndY;
+        
+        // Only trigger swipe if horizontal movement is dominant
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+          isAutoPlaying = false;
+          if (diffX > 0) next();
+          else prev();
+          isAutoPlaying = true;
+        }
+      }, { passive: true });
+    }
+
+    // Initialize first slide
+    slides.forEach((slide, i) => {
+      slide.setAttribute('aria-hidden', i !== 0 ? 'true' : 'false');
+    });
+    dots[0]?.setAttribute('aria-selected', 'true');
+    dots[0]?.classList.add('active');
+    
+    // Set initial IDs for accessibility
+    slides.forEach((slide, i) => {
+      slide.id = `slide-${slide.dataset.slide}`;
+    });
+
+    // Auto-play with per-slide duration
+    var autoPlayInterval;
+    function getCurrentDuration() {
+      var slide = slides[currentIndex];
+      var secs = parseInt(slide?.dataset.duration) || 8;
+      return Math.max(secs - 1, 1) * 1000;
+    }
+    function startAutoPlay() {
+      stopAutoPlay();
+      isAutoPlaying = true;
+      autoPlayInterval = setInterval(next, getCurrentDuration());
+    }
+    function stopAutoPlay() {
+      clearInterval(autoPlayInterval);
+      isAutoPlaying = false;
+    }
+
+    // Video management - reload iframe to restart from zero
+    function stopVideo(slide) {
+      var iframe = slide.querySelector('iframe[data-video-slide]');
+      var blocker = slide.querySelector('[data-video-blocker]');
+      if (iframe) {
+        iframe.src = '';
+      }
+      if (blocker) {
+        blocker.style.cssText = 'position:absolute;inset:0;background:#0a0a0a;cursor:default;z-index:9999 !important;pointer-events:all !important;opacity:0;transition:none;';
+      }
+    }
+    function startVideo(slide) {
+      var iframe = slide.querySelector('iframe[data-video-slide]');
+      var blocker = slide.querySelector('[data-video-blocker]');
+      if (blocker) {
+        blocker.style.cssText = 'position:absolute;inset:0;background:transparent;cursor:default;z-index:9999 !important;pointer-events:all !important;opacity:1;transition:none;';
+      }
+      if (iframe && iframe.dataset.videoId) {
+        var t = Date.now();
+        iframe.src = 'https://www.youtube.com/embed/' + iframe.dataset.videoId + '?autoplay=1&mute=1&loop=0&controls=0&showinfo=0&modestbranding=1&iv_load_policy=3&rel=0&disablekb=1&playsinline=1&enablejsapi=1&_t=' + t;
+      }
+    }
+
+    // Set video IDs on iframes for reload
+    slides.forEach(function(slide) {
+      var iframe = slide.querySelector('iframe[data-video-slide]');
+      if (iframe) {
+        iframe.dataset.videoId = iframe.src.match(/embed\/([^?]+)/)?.[1] || '';
+      }
+    });
+
+    // Preload video for a given slide index
+    function preloadVideo(slideIndex) {
+      if (slideIndex >= slides.length || slideIndex < 0) return;
+      var slide = slides[slideIndex];
+      var iframe = slide.querySelector('iframe[data-video-slide]');
+      if (iframe && iframe.dataset.videoId && !iframe.src) {
+        var t = Date.now();
+        iframe.src = 'https://www.youtube.com/embed/' + iframe.dataset.videoId + '?autoplay=1&mute=1&loop=0&controls=0&showinfo=0&modestbranding=1&iv_load_policy=3&rel=0&disablekb=1&playsinline=1&enablejsapi=1&_t=' + t;
+      }
+    }
+
+    // Override goTo to manage video playback
+    var originalGoTo = goTo;
+    goTo = function(index, skipScroll) {
+      var prevSlide = slides[currentIndex];
+      originalGoTo(index, skipScroll);
+      var newSlide = slides[currentIndex];
+      if (prevSlide && prevSlide !== newSlide) {
+        stopVideo(prevSlide);
+      }
+      if (newSlide) {
+        startVideo(newSlide);
+        // Preload next slide's video
+        var nextIdx = currentIndex + 1;
+        if (nextIdx >= slides.length) nextIdx = 0;
+        setTimeout(function() { preloadVideo(nextIdx); }, 100);
+      }
+      // Restart timer with new slide's duration
+      if (isAutoPlaying) {
+        startAutoPlay();
+      }
+    };
+
+    // Listen for YouTube video end events via postMessage (both event formats)
+    window.addEventListener('message', function(e) {
+      if (e.origin !== 'https://www.youtube.com') return;
+      if (typeof e.data !== 'string') return;
+      try {
+        var data = JSON.parse(e.data);
+        var ended = false;
+        // Format 1: infoDelivery with playerState object
+        if (data.event === 'infoDelivery' && data.info && data.info.playerState === 0) {
+          ended = true;
+        }
+        // Format 2: onStateChange with info as direct state number
+        if (data.event === 'onStateChange' && data.info === 0) {
+          ended = true;
+        }
+        if (ended) {
+          var currentSlide = slides[currentIndex];
+          if (currentSlide && currentSlide.querySelector('iframe[data-video-slide]')) {
+            next();
+          }
+        }
+      } catch(err) {}
+    });
+
+    carousel.addEventListener('mouseenter', stopAutoPlay);
+    carousel.addEventListener('mouseleave', startAutoPlay);
+    carousel.addEventListener('focusin', stopAutoPlay);
+    carousel.addEventListener('focusout', startAutoPlay);
+    
+    startAutoPlay();
+
+    // Pause auto-play on touch
+    if (container) {
+      container.addEventListener('touchstart', stopAutoPlay, { passive: true });
+      container.addEventListener('touchend', function() {
+        setTimeout(startAutoPlay, 3000);
+      }, { passive: true });
+    }
+  })();
+</script>

@@ -1,0 +1,99 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Order Flow Institucional: Qué es y cómo leerlo como un profesional" description="Aprende a identificar muros de liquidez, volumen anómalo y cinética de precios. La lectura de Order Flow que usan los traders institucionales en NinjaTrader 8.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Educación</span>
+        <span>30 Jun 2026</span>
+        <span>· 6 min lectura</span>
+      </div>
+
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Order Flow Institucional: Qué es y cómo leerlo</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">El Order Flow es el lenguaje nativo del mercado. Aprende a leer la huella institucional.</p>
+
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Qué es el Order Flow?</h2>
+          <p>El Order Flow (flujo de órdenes) es el registro en tiempo real de cada orden que entra al mercado. Mientras que un gráfico de velas te muestra el resultado de la interacción entre compradores y vendedores, el Order Flow te muestra <strong class="text-white">cómo se construyó ese resultado</strong>.</p>
+          <p class="mt-3">Piénsalo así: las velas son la fotografía del pasado. El Order Flow es la filmación en vivo de cómo se tomó esa foto.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Los 3 pilares del Order Flow Institucional</h2>
+
+          <h3 class="text-lg font-bold text-accent mb-2">1. Muros de Liquidez (Oferta y Demanda)</h3>
+          <p>Son concentraciones masivas de órdenes en un nivel de precio específico. Cuando el precio se acerca a un muro de oferta (sell wall), es probable que rebote. Cuando atraviesa un muro con volumen, la dirección suele continuar.</p>
+          <p class="mt-2">Las herramientas de GP Trading como <strong class="text-white">GFlow Pro Premium</strong> y <strong class="text-white">OmniFlow GFlow PRO v2.0</strong> detectan automáticamente estos muros y los dibujan en tu gráfico.</p>
+
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">2. Volumen Anómalo</h3>
+          <p>No todo volumen es igual. El volumen anómalo es aquel que supera significativamente el promedio de las últimas velas. Cuando ves un pico de volumen sin un movimiento proporcional de precio, hay <strong class="text-white">interés institucional oculto</strong>.</p>
+          <p class="mt-2">La <strong class="text-white">Radiación Cinética Huérfana</strong> de OmniFlow GFlow PRO v2.0 está diseñada específicamente para detectar estas anomalías.</p>
+
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">3. Cinética de Precios</h3>
+          <p>No es solo cuánto se mueve el precio, sino <strong class="text-white">cómo</strong> se mueve. Una vela que sube rápidamente con volumen decreciente es sospechosa. Una vela que sube con volumen creciente es confirmación.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Cómo empezar a leer Order Flow</h2>
+          <ol class="list-decimal pl-6 space-y-3">
+            <li><strong class="text-white">Identifica el sesgo:</strong> ¿El mercado está acumulando o distribuyendo? Mira los picos de volumen en zonas de soporte/resistencia.</li>
+            <li><strong class="text-white">Busca muros:</strong> ¿Hay zonas donde el precio ha rebotado múltiples veces con volumen creciente?</li>
+            <li><strong class="text-white">Analiza la absorción:</strong> Cuando el precio llega a un muro y lo atraviesa sin aceleración, hay continuación.</li>
+            <li><strong class="text-white">Confirma con volumen:</strong> Un breakout sin volumen es trampa. Con volumen es válido.</li>
+            <li><strong class="text-white">Usa el Modo Dios:</strong> En OmniFlow GFlow PRO v2.0, activa el Modo Dios para solo las confluencias mayores.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Errores comunes al leer Order Flow</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">Confundir volumen con intención:</strong> Volumen alto no siempre significa dirección.</li>
+            <li><strong class="text-white">Ignorar el contexto:</strong> Un muro en rango no es lo mismo que uno en ruptura.</li>
+            <li><strong class="text-white">Sobreanalizar:</strong> El Order Flow se lee en bloques, no en ticks.</li>
+            <li><strong class="text-white">Operar sin confluencia:</strong> Espera a que al menos 2 de los 3 pilares confirmen.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Herramientas de GP Trading para Order Flow</h2>
+          <p>Nuestra suite incluye herramientas para distintos niveles de profundidad:</p>
+          <ul class="list-disc pl-6 space-y-2 mt-3">
+            <li><strong class="text-white">GFlow Pro Premium</strong> ($300) — Mapa de calor base con detección de muros y Volume Profile.</li>
+            <li><strong class="text-white">OmniFlow GFlow X</strong> ($499) — Kinetic Singularity, proyecciones TP1-TP4 y panel HUD.</li>
+            <li><strong class="text-white">OmniFlow GFlow PRO v2.0</strong> ($699) — Modo Dios, Zonas Verificadas, Radiación Cinética y HUD Direct2D.</li>
+          </ul>
+        </section>
+
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <p class="text-lg font-bold text-white">Domina el Order Flow con GP Trading</p>
+              <p class="text-xs text-gray-500">Explora nuestra suite de herramientas para NinjaTrader 8.</p>
+            </div>
+            <a href="/#detalle" class="inline-flex items-center gap-2 px-6 py-4 text-sm font-semibold text-primary bg-accent rounded-full hover:bg-accent-400 transition-all min-h-[44px] shrink-0">
+              Ver herramientas
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

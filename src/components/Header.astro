@@ -1,0 +1,59 @@
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-primary/80 backdrop-blur-xl">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <a href="/" class="flex items-center gap-3 group">
+        <img src="/logo.svg" alt="GP Trading" class="h-8 w-8 md:h-10 md:w-10 transition-transform group-hover:scale-110" />
+        <span class="text-lg md:text-xl font-bold tracking-tight">
+          GP <span class="text-accent">Trading</span>
+        </span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/#productos" class="text-sm text-gray-300 hover:text-accent transition-colors">Productos</a>
+        <a href="/blog" class="text-sm text-gray-300 hover:text-accent transition-colors">Blog</a>
+        <a href="/faq" class="text-sm text-gray-300 hover:text-accent transition-colors">FAQ</a>
+        <a href="/#contacto" class="text-sm text-gray-300 hover:text-accent transition-colors">Contacto</a>
+        <a href="https://wa.link/rzdnzn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-primary bg-accent rounded-full hover:bg-accent-400 transition-all hover:scale-105">
+          Comprar Ahora
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+
+      <button id="menu-btn" class="md:hidden p-3 text-gray-300 hover:text-white min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-primary/95 backdrop-blur-xl">
+    <div class="px-4 py-4 space-y-3">
+        <a href="/#productos" class="block px-3 py-3 text-gray-300 hover:text-accent touch-manipulation">Productos</a>
+        <a href="/blog" class="block px-3 py-3 text-gray-300 hover:text-accent touch-manipulation">Blog</a>
+        <a href="/faq" class="block px-3 py-3 text-gray-300 hover:text-accent touch-manipulation">FAQ</a>
+        <a href="/#contacto" class="block px-3 py-3 text-gray-300 hover:text-accent touch-manipulation">Contacto</a>
+      <a href="https://wa.link/rzdnzn" target="_blank" rel="noopener noreferrer" class="block px-3 py-3 text-center font-semibold text-primary bg-accent rounded-full touch-manipulation">Comprar Ahora</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  (function() {
+    var menuBtn = document.getElementById('menu-btn');
+    var mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+        var isOpen = !mobileMenu.classList.contains('hidden');
+        menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        mobileMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      });
+      var links = mobileMenu.querySelectorAll('a');
+      links.forEach(function(link) {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.add('hidden');
+          menuBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  })();
+</script>

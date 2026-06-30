@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="SMC — Smart Money Concepts explicado para traders de NinjaTrader 8" description="Smart Money Concepts (SMC) es el enfoque de trading que sigue el dinero institucional. Aprende a identificar liquidez, manipulación y tendencias como los grandes players.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Educación</span>
+        <span>30 Jun 2026</span>
+        <span>· 7 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">SMC: Smart Money Concepts explicado para traders de NinjaTrader 8</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">Smart Money Concepts no es un indicador, es una forma de entender el mercado. Aquí te explicamos cómo aplicarlo con herramientas reales.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Qué es Smart Money Concepts?</h2>
+          <p>Smart Money Concepts (SMC) es un enfoque de trading que se basa en seguir el rastro del "dinero inteligente" — bancos, instituciones y market makers. La premisa es que el precio se mueve donde las instituciones necesitan que se mueva para llenar sus órdenes, no donde el minorista espera.</p>
+          <p class="mt-3">SMC se popularizó como evolución del ICT (Inner Circle Trader) y se centra en conceptos como liquidez, manipulación (FVG), y cambios de carácter (CHOCH).</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Los conceptos clave de SMC</h2>
+          <h3 class="text-lg font-bold text-accent mb-2">Liquidez (Liquidity)</h3>
+          <p>Las instituciones necesitan liquidez para entrar y salir de posiciones grandes. Buscan zonas donde haya stops de minoristas acumulados: máximos/mínimos de rangos anteriores, y zonas de alto volumen. Cuando el precio "caza stops" y luego revierte, suele ser la huella institucional.</p>
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">Fair Value Gap (FVG)</h3>
+          <p>Un desequilibrio entre velas donde el precio se movió tan rápido que dejó un "hueco" sin negociar. Las instituciones tienden a volver a estas zonas para rellenarlos antes de continuar la tendencia. Nuestras herramientas de Order Flow como <strong class="text-white">GFlow Pro Premium</strong> detectan estos desequilibrios automáticamente.</p>
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">Change of Character (CHOCH)</h3>
+          <p>Cuando el precio rompe una estructura de mercado (un máximo creciente en tendencia alcista, o un mínimo decreciente en bajista), indica que el Smart Money ha cambiado de dirección. Es la señal más fiable de cambio de tendencia.</p>
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">Order Block (OB)</h3>
+          <p>Son velas donde las instituciones colocaron órdenes masivas. Un Order Block alcista es la última vela bajista antes de que el precio suba fuertemente, y viceversa. Son zonas de soporte/resistencia de alta probabilidad.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">SMC + Order Flow = la combinación perfecta</h2>
+          <p>SMC te da el mapa conceptual, pero el Order Flow te da la confirmación en tiempo real. Cuando SMC te dice "esta es una zona de liquidez" y el Order Flow te muestra volumen anómalo en esa zona, tienes confluencia de alta probabilidad.</p>
+          <p class="mt-3">Las herramientas de GP Trading están diseñadas para esta sinergia: <strong class="text-white">GFlow Pro Premium</strong> y <strong class="text-white">OmniFlow GFlow X</strong> visualizan exactamente lo que SMC describe, pero con datos matemáticos en lugar de interpretación subjetiva.</p>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <p class="text-sm text-gray-400">SMC te da la teoría, el Order Flow te da la ejecución. <a href="/#detalle-gflowpro" class="text-accent hover:underline">Combínalos con GFlow Pro Premium</a> y opera con la precisión institucional.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

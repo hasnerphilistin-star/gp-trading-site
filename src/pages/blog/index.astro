@@ -1,0 +1,278 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const posts = [
+  {
+    slug: 'omniflow-gflow-pro-v2-guia-completa',
+    title: 'OmniFlow GFlow PRO v2.0 — La guía completa de la herramienta más avanzada de la suite',
+    excerpt: 'Descubre el panel HUD Direct2D, el Modo Dios, las Zonas Verificadas y cómo este motor matemático de Order Flow puede transformar tu trading.',
+    date: '30 Jun 2026',
+    readTime: '8 min',
+    category: 'Herramientas'
+  },
+  {
+    slug: 'order-flow-institucional-que-es-y-como-leerlo',
+    title: 'Order Flow Institucional: Qué es y cómo leerlo como un profesional',
+    excerpt: 'Aprende a identificar muros de liquidez, volumen anómalo y cinética de precios. La lectura de Order Flow que usan los traders institucionales.',
+    date: '30 Jun 2026',
+    readTime: '6 min',
+    category: 'Educación'
+  },
+  {
+    slug: 'tradesyncer-pro-v2-guia-completa',
+    title: 'TradeSyncer PRO v2.0 — El copiador de operaciones más rápido para NinjaTrader 8',
+    excerpt: 'Copia trades en tiempo real entre cuentas con latencia ultra baja, sincronización bidireccional y Daily Loss Limit integrado.',
+    date: '30 Jun 2026',
+    readTime: '7 min',
+    category: 'Herramientas'
+  },
+  {
+    slug: 'errores-al-copiar-trades-y-como-evitarlos',
+    title: 'Los 3 errores más comunes al copiar trades y cómo evitarlos',
+    excerpt: 'Los fallos más frecuentes al copiar trades en múltiples cuentas: latencia, límites de pérdida y desincronización. Aprende a solucionarlos.',
+    date: '30 Jun 2026',
+    readTime: '5 min',
+    category: 'Educación'
+  },
+  {
+    slug: 'gp-firm-copier-pro-guia',
+    title: 'GP Firm Copier Pro — Copia trades a 20+ cuentas con Daily Loss Limit',
+    excerpt: 'El copiador profesional para traders de prop firms con protección de riesgo integrada y panel de control unificado.',
+    date: '30 Jun 2026',
+    readTime: '6 min',
+    category: 'Herramientas'
+  },
+  {
+    slug: 'prop-firms-2026-evaluaciones',
+    title: 'Prop Firms 2026: Cómo pasar las evaluaciones con consistencia',
+    excerpt: 'Guía completa para aprobar evaluaciones de prop firms. Estrategias, gestión de riesgo y herramientas para escalar.',
+    date: '30 Jun 2026',
+    readTime: '7 min',
+    category: 'Educación'
+  },
+  {
+    slug: 'gpriskreward-guia-completa',
+    title: 'GPRiskReward — Auto-Lotaje y OCO One-Click para gestión de riesgo perfecta',
+    excerpt: 'Calcula el tamaño de posición automáticamente y coloca TP y SL con un solo clic. La calculadora de riesgo más avanzada para NT8.',
+    date: '30 Jun 2026',
+    readTime: '6 min',
+    category: 'Herramientas'
+  },
+  {
+    slug: 'risk-management-clave-trading-rentable',
+    title: 'Risk Management: La clave del trading rentable que nadie te enseña',
+    excerpt: 'El 80% de los traders fracasa por mala gestión de riesgo. Aprende las reglas que usan los profesionales para proteger su capital.',
+    date: '30 Jun 2026',
+    readTime: '6 min',
+    category: 'Educación'
+  },
+  {
+    slug: 'omniflow-gflow-x-guia',
+    title: 'OmniFlow GFlow X — Kinetic Singularity y proyecciones TP1-TP4 avanzadas',
+    excerpt: 'Order Flow de rango medio con detección de puntos de inflexión, proyecciones de take profit y panel HUD inteligente.',
+    date: '30 Jun 2026',
+    readTime: '6 min',
+    category: 'Herramientas'
+  },
+  {
+    slug: 'volume-profile-huella-institucional',
+    title: 'Volume Profile: Cómo leer la huella institucional en tiempo real',
+    excerpt: 'El Volume Profile es la herramienta más infravalorada. Aprende a leer POC, Value Area y zonas de liquidez como un profesional.',
+    date: '30 Jun 2026',
+    readTime: '7 min',
+    category: 'Educación'
+  },
+  {
+    slug: 'omniflow-quantum-prime-guia',
+    title: 'OmniFlow Quantum Prime — El algoritmo paramétrico definitivo para scalping',
+    excerpt: 'Algoritmo paramétrico que se adapta a la volatilidad del mercado para darte señales de scalping con precisión milimétrica.',
+    date: '30 Jun 2026',
+    readTime: '6 min',
+    category: 'Herramientas'
+  },
+  {
+    slug: 'smc-smart-money-concepts-ninjatrader',
+    title: 'SMC: Smart Money Concepts explicado para traders de NinjaTrader 8',
+    excerpt: 'Aprende a identificar liquidez, Fair Value Gaps y cambios de carácter. El enfoque institucional combinado con herramientas reales.',
+    date: '30 Jun 2026',
+    readTime: '7 min',
+    category: 'Educación'
+  },
+  {
+    slug: 'gflow-pro-premium-guia',
+    title: 'GFlow Pro Premium — Mapa de calor de liquidez institucional para NT8',
+    excerpt: 'Mapa de calor de liquidez con detección de muros de oferta/demanda, Volume Profile de sesión y confluencias en tiempo real.',
+    date: '30 Jun 2026',
+    readTime: '6 min',
+    category: 'Herramientas'
+  },
+  {
+    slug: 'order-flow-ventaja-estadistica',
+    title: 'Cómo los indicadores de Order Flow mejoran tu ventaja estadística',
+    excerpt: 'El trading es una ecuación. Los indicadores de Order Flow mejoran tu Win Rate y tu Ratio Risk/Reward. Datos reales y análisis.',
+    date: '30 Jun 2026',
+    readTime: '7 min',
+    category: 'Ventaja Estadística'
+  },
+  {
+    slug: 'gp-vwap-clasico-guia',
+    title: 'GP VWAP Clásico — La herramienta de volumen institucional para day trading',
+    excerpt: 'VWAP con bandas de desviación, múltiples períodos y señales automáticas de reversión. La referencia institucional en tu gráfico.',
+    date: '30 Jun 2026',
+    readTime: '5 min',
+    category: 'Herramientas'
+  },
+  {
+    slug: 'vwap-referencia-institucional',
+    title: 'VWAP: La referencia institucional que todo trader debe conocer',
+    excerpt: 'El indicador más usado por los institucionales para medir precio justo. Aprende a usarlo con bandas de desviación estadística.',
+    date: '30 Jun 2026',
+    readTime: '6 min',
+    category: 'Educación'
+  },
+  {
+    slug: 'nexus-trend-engine-guia',
+    title: 'Nexus Trend Engine — Motor de tendencias inteligente para NinjaTrader 8',
+    excerpt: 'Motor multicapa que combina momentum, volumen y estructura de mercado para darte señales claras de entrada y salida.',
+    date: '30 Jun 2026',
+    readTime: '6 min',
+    category: 'Herramientas'
+  },
+  {
+    slug: 'identificar-tendencias-temprano',
+    title: 'Cómo identificar tendencias temprano con herramientas de análisis técnico',
+    excerpt: 'Aprende a detectar tendencias antes de que se consoliden combinando análisis de estructura, volumen y momentum.',
+    date: '30 Jun 2026',
+    readTime: '6 min',
+    category: 'Educación'
+  },
+  {
+    slug: 'specter-trend-cloud-guia',
+    title: 'Specter Trend Cloud — Nube de tendencia adaptativa con alertas inteligentes',
+    excerpt: 'Nube de tendencia que cambia de color según la fuerza del mercado. Detecta cambios de dirección antes que las medias tradicionales.',
+    date: '30 Jun 2026',
+    readTime: '5 min',
+    category: 'Herramientas'
+  },
+  {
+    slug: 'confluencia-multiple-ventaja-estadistica',
+    title: 'La ventaja estadística de operar con confluencia múltiple de herramientas',
+    excerpt: 'Cuando varias herramientas independientes señalan la misma dirección, la probabilidad de acierto se multiplica. La matemática detrás de la confluencia.',
+    date: '30 Jun 2026',
+    readTime: '7 min',
+    category: 'Ventaja Estadística'
+  },
+  {
+    slug: 'gpcuantum-x-guia',
+    title: 'GPCuantum X — Análisis de mercado cuántico con proyecciones multi-timeframe',
+    excerpt: 'Analiza 3 timeframes simultáneamente con detección de confluencia y señales de alineación temporal.',
+    date: '30 Jun 2026',
+    readTime: '6 min',
+    category: 'Herramientas'
+  },
+  {
+    slug: 'psicologia-trading-order-flow',
+    title: 'Psicología del trading: cómo el Order Flow reduce la incertidumbre',
+    excerpt: 'La incertidumbre es el combustible de las malas decisiones. Descubre cómo los datos objetivos del Order Flow mejoran tu disciplina.',
+    date: '30 Jun 2026',
+    readTime: '6 min',
+    category: 'Educación'
+  },
+  {
+    slug: 'ia-en-trading-2026-realidad',
+    title: 'IA en trading: qué es real y qué es hype en 2026',
+    excerpt: 'Separamos los mitos de la realidad sobre la inteligencia artificial aplicada al trading y te mostramos qué funciona realmente.',
+    date: '30 Jun 2026',
+    readTime: '7 min',
+    category: 'Educación'
+  }
+];
+---
+
+<Layout title="Blog - GP Trading Academy" description="Artículos y tutoriales sobre Order Flow, SMC, indicadores NinjaTrader 8 y estrategias de trading profesional.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1.5 text-xs font-mono text-accent bg-accent/10 border border-accent/20 rounded-full mb-4">
+          Blog
+        </span>
+        <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-4">
+          Aprende Trading <span class="gradient-text">Profesional</span>
+        </h1>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          Tutoriales, guías y análisis sobre Order Flow, SMC y las herramientas de la suite GP Trading para NinjaTrader 8.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-2 justify-center mb-10">
+        <button class="filter-btn active px-3 py-1.5 text-xs font-mono rounded-full border border-white/10 text-gray-400 hover:text-white hover:border-accent/30 transition-all" data-filter="all">Todos</button>
+        <button class="filter-btn px-3 py-1.5 text-xs font-mono rounded-full border border-white/10 text-gray-400 hover:text-white hover:border-accent/30 transition-all" data-filter="Herramientas">Herramientas</button>
+        <button class="filter-btn px-3 py-1.5 text-xs font-mono rounded-full border border-white/10 text-gray-400 hover:text-white hover:border-accent/30 transition-all" data-filter="Educación">Educación</button>
+        <button class="filter-btn px-3 py-1.5 text-xs font-mono rounded-full border border-white/10 text-gray-400 hover:text-white hover:border-accent/30 transition-all" data-filter="Ventaja Estadística">Ventaja Estadística</button>
+      </div>
+
+      <div class="space-y-6" id="posts-grid">
+        {posts.map((post) => (
+          <a href={`/blog/${post.slug}`} class="block glass-card p-6 md:p-8 group hover:ring-1 hover:ring-accent/30 transition-all" data-category={post.category}>
+            <div class="flex items-center gap-3 text-xs text-gray-500 mb-3">
+              <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">{post.category}</span>
+              <span>{post.date}</span>
+              <span>· {post.readTime} lectura</span>
+            </div>
+            <h2 class="text-lg md:text-xl font-bold text-white group-hover:text-accent transition-colors mb-2">
+              {post.title}
+            </h2>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              {post.excerpt}
+            </p>
+            <div class="mt-4 flex items-center gap-1 text-sm font-semibold text-accent group-hover:gap-2 transition-all">
+              Leer artículo <span aria-hidden="true">→</span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="text-center mt-16">
+        <div class="glass-card p-8">
+          <h2 class="text-xl font-bold text-white mb-3">Nuevos artículos cada semana</h2>
+          <p class="text-gray-400 text-sm">Suscríbete a nuestro canal de YouTube para no perderte ningún contenido.</p>
+          <a href="https://www.youtube.com/@GPTradingFX" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 px-6 py-4 text-sm font-semibold text-primary bg-accent rounded-full hover:bg-accent-400 transition-all min-h-[44px]">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>
+
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('#posts-grid > a').forEach(post => {
+        if (filter === 'all' || post.dataset.category === filter) {
+          post.style.display = '';
+        } else {
+          post.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .filter-btn.active {
+    color: #00d4aa;
+    border-color: #00d4aa;
+    background: rgba(0, 212, 170, 0.1);
+  }
+</style>

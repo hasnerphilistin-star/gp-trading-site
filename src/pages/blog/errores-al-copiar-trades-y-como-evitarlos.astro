@@ -1,0 +1,54 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Los 3 errores más comunes al copiar trades y cómo evitarlos" description="Descubre los fallos más frecuentes al usar copiadores de trades en NinjaTrader 8 y cómo solucionarlos para mantener la sincronización perfecta entre cuentas.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Educación</span>
+        <span>30 Jun 2026</span>
+        <span>· 5 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Los 3 errores más comunes al copiar trades y cómo evitarlos</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">Copiar trades entre cuentas parece sencillo, pero pequeños errores pueden costarte caro. Aquí los más frecuentes y cómo solucionarlos.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Error #1: Latencia de sincronización</h2>
+          <p>El error más común al copiar trades es la <strong class="text-white">latencia entre cuentas</strong>. Cuando usas copiadores que funcionan por polling, pueden pasar segundos (o minutos) entre que se abre un trade en la cuenta maestra y se replica en las esclavas. En mercados rápidos, esto puede significar entrar en un precio completamente distinto.</p>
+          <p class="mt-3"><strong class="text-accent">Solución:</strong> Usa un copiador basado en eventos en tiempo real, como <strong class="text-white">TradeSyncer PRO v2.0</strong>, que reacciona instantáneamente a los cambios en el motor de NinjaTrader sin depender de polling.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Error #2: No tener Daily Loss Limit por cuenta</h2>
+          <p>Muchos traders configuran un límite de pérdida general, pero cuando operan múltiples cuentas de prop firms, cada cuenta tiene sus propias reglas. Sin límites individuales, una cuenta puede sobrepasar su Drawdown Diario Máximo (DDM) mientras las otras están bien, arriesgando todas las evaluaciones.</p>
+          <p class="mt-3"><strong class="text-accent">Solución:</strong> Configura un <strong class="text-white">Daily Loss Limit por cuenta</strong> en tu copiador. TradeSyncer PRO v2.0 permite establecer límites independientes que detienen solo la cuenta afectada.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Error #3: No reconciliar posiciones manuales</h2>
+          <p>A veces cierras un trade manualmente en una cuenta porque viste algo en el gráfico, pero el copiador no lo replica en las demás. El resultado: cuentas desincronizadas, posiciones huérfanas y dolores de cabeza al final del día.</p>
+          <p class="mt-3"><strong class="text-accent">Solución:</strong> Asegúrate de que tu copiador tenga <strong class="text-white">sincronización bidireccional</strong>, para que cualquier cierre manual en cualquier cuenta se replique automáticamente en todas.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Bonus: Error de filtrado</h2>
+          <p>No configurar filtros por instrumento o estrategia puede hacer que copies trades que no deberías. Por ejemplo, si operas NQ en la cuenta maestra y tu cuenta esclava solo debe operar ES, necesitas filtrar.</p>
+          <p class="mt-3"><strong class="text-accent">Solución:</strong> Usa un copiador que permita <strong class="text-white">filtros por instrumento, estrategia y tamaño mínimo</strong> para tener control granular de lo que se copia.</p>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8 p-4 bg-accent/5 border border-accent/10 rounded-xl">
+          <p class="text-xs text-gray-400">💡 La herramienta <a href="/#detalle-tradesyncer" class="text-accent hover:underline">TradeSyncer PRO v2.0</a> de GP Trading fue diseñada específicamente para resolver estos 3 errores. Está construida con sincronización bidireccional en tiempo real, Daily Loss Limit por cuenta y filtros avanzados.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

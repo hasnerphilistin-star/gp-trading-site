@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="GP Firm Copier Pro — Copia trades a 20+ cuentas con Daily Loss Limit" description="El copiador profesional para traders de prop firms. Hasta 20 cuentas simultáneas con Daily Loss Limit individual, filtros por instrumento y sincronización bidireccional en NT8.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Herramientas</span>
+        <span>30 Jun 2026</span>
+        <span>· 6 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">GP Firm Copier Pro</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">El copiador diseñado específicamente para traders de prop firms. Gestiona hasta 20 cuentas simultáneas con protección de riesgo integrada.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Qué es GP Firm Copier Pro?</h2>
+          <p>GP Firm Copier Pro es la evolución del concepto de copiador de trades, enfocado 100% en las necesidades de los traders de prop firms. A diferencia de los copiadores genéricos, GP Firm Copier Pro entiende las reglas de las evaluaciones y está construido para ayudarte a pasar <strong class="text-white">múltiples cuentas simultáneamente</strong> sin violar ninguna regla.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Características exclusivas</h2>
+          <h3 class="text-lg font-bold text-accent mb-2">20+ Cuentas Simultáneas</h3>
+          <p>Soporta hasta 20 cuentas en una sola instancia. Añade y remueve cuentas en caliente sin necesidad de reiniciar NinjaTrader.</p>
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">Daily Loss Limit Inteligente</h3>
+          <p>Cada cuenta tiene su propio límite diario configurable. Cuando una cuenta alcanza el límite, se detiene automáticamente y las demás siguen operando sin interrupción. Ideal para cuentas de prop firms con distintos niveles de DDM.</p>
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">Modo Prop Firm</h3>
+          <p>Un modo específico que respeta las reglas comunes de las evaluaciones: no opera en horas restringidas, respeta el tamaño máximo de posición por cuenta, y ajusta automáticamente el lotaje según el capital de cada cuenta.</p>
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">Panel de Control Unificado</h3>
+          <p>Un dashboard en tiempo real donde ves el estado de todas tus cuentas: P&L diario, posiciones abiertas, Drawdown actual y límites restantes. Todo desde una sola ventana.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Diferencias con TradeSyncer PRO</h2>
+          <p>Mientras que <strong class="text-white">TradeSyncer PRO v2.0</strong> es un copiador universal para cualquier escenario, GP Firm Copier Pro está optimizado específicamente para el ecosistema de prop firms. Si gestionas cuentas de evaluación con reglas estrictas, GP Firm Copier Pro es tu herramienta. Si necesitas un copiador para uso general con brokers variados, TradeSyncer PRO es la opción.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Para quién es?</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Traders con <strong class="text-white">múltiples evaluaciones de prop firms</strong> activas simultáneamente.</li>
+            <li>Traders que han perdido evaluaciones por violar el DDM en una sola cuenta.</li>
+            <li>Quienes necesitan <strong class="text-white">control granular</strong> del riesgo por cuenta.</li>
+            <li>Cualquiera que quiera escalar su operativa a 20 cuentas sin volverse loco.</li>
+          </ul>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <p class="text-lg font-bold text-white">¿Listo para escalar tus cuentas?</p>
+              <p class="text-xs text-gray-500">GP Firm Copier Pro — diseñado para traders de prop firms.</p>
+            </div>
+            <a href="/#detalle-firmcopier" class="inline-flex items-center gap-2 px-6 py-4 text-sm font-semibold text-primary bg-accent rounded-full hover:bg-accent-400 transition-all min-h-[44px] shrink-0">Ver en acción <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

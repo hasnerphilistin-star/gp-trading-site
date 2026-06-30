@@ -1,0 +1,73 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="TÍTULO DEL ARTÍCULO — GP Trading Academy" description="Descripción breve de 150-160 caracteres para SEO y redes sociales.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Categoría</span>
+        <span>Fecha</span>
+        <span>· X min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Título Principal</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">Subtítulo o bajada debajo del título.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+
+        <!-- SECCIÓN -->
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Subtítulo de sección</h2>
+          <p>Escribe aquí tu contenido. Puedes usar <strong class="text-white">negrita</strong> para palabras clave.</p>
+          <p class="mt-3">Así se escribe un párrafo nuevo.</p>
+        </section>
+
+        <!-- LISTA -->
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Título con lista</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">Elemento destacado:</strong> descripción del elemento.</li>
+            <li><strong class="text-white">Otro elemento:</strong> descripción.</li>
+          </ul>
+        </section>
+
+        <!-- SUBSECCIÓN -->
+        <section>
+          <h3 class="text-lg font-bold text-accent mb-2">Subtítulo secundario (verde)</h3>
+          <p>Contenido de la subsección.</p>
+        </section>
+
+        <!-- NOTA DESTACADA -->
+        <div class="p-4 bg-accent/5 border border-accent/10 rounded-xl">
+          <p class="text-xs text-gray-400">💡 Esta es una nota destacada. Usa este bloque para tips importantes o enlaces.</p>
+        </div>
+
+        <!-- CTA FINAL -->
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <p class="text-lg font-bold text-white">Frase de cierre llamativa</p>
+              <p class="text-xs text-gray-500">Texto secundario opcional.</p>
+            </div>
+            <a href="/#detalle" class="inline-flex items-center gap-2 px-6 py-4 text-sm font-semibold text-primary bg-accent rounded-full hover:bg-accent-400 transition-all min-h-[44px] shrink-0">
+              Texto del botón
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

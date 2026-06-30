@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="GPRiskReward — Auto-Lotaje y OCO One-Click para gestión de riesgo perfecta" description="GPRiskReward automatiza el cálculo de tamaño de posición con OCO One-Click integrado. Gestiona tu riesgo en segundos con Auto-Lotaje preciso para NinjaTrader 8.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Herramientas</span>
+        <span>30 Jun 2026</span>
+        <span>· 6 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">GPRiskReward</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">Auto-Lotaje y OCO One-Click. La calculadora de riesgo más avanzada para NinjaTrader 8, integrada directamente en tu gráfico.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Qué es GPRiskReward?</h2>
+          <p>GPRiskReward es un sistema de gestión de riesgo inteligente para NinjaTrader 8 que combina <strong class="text-white">Auto-Lotaje</strong> (cálculo automático del tamaño de posición) con <strong class="text-white">OCO One-Click</strong> (órdenes Cancel-One-Other en un solo clic). Olvídate de calculadoras externas y hojas de Excel: todo está integrado en tu gráfico.</p>
+          <p class="mt-3">Anteriormente conocido como "RiskRewardSniper", fue rediseñado completamente para ofrecer una experiencia más fluida y precisa.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Cómo funciona el Auto-Lotaje?</h2>
+          <p>Define tu riesgo en dinero ($) o porcentaje (%), marca tu Stop Loss en el gráfico, y GPRiskReward calcula automáticamente el tamaño exacto de posición. No más errores de cálculo ni posiciones sobredimensionadas.</p>
+          <p class="mt-3">Ejemplo: si arriesgas $100 y tu Stop está a 10 ticks, GPRiskReward calcula que debes entrar con 2 contratos de NQ. Si cambias el Stop, el lotaje se recalcula al instante.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">OCO One-Click</h2>
+          <p>Coloca tu Take Profit y Stop Loss simultáneamente con un solo clic. El sistema OCO (One Cancels Other) asegura que si una orden se ejecuta, la otra se cancela automáticamente. Sin órdenes huérfanas, sin riesgos innecesarios.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Características destacadas</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">Auto-Lotaje en tiempo real:</strong> Calcula el tamaño exacto según Stop Loss y riesgo definido.</li>
+            <li><strong class="text-white">OCO One-Click:</strong> TP y SL en un solo clic con cancelación automática.</li>
+            <li><strong class="text-white">Ratio Risk/Reward visual:</strong> Muestra la relación R/R antes de entrar.</li>
+            <li><strong class="text-white">Múltiples modos de riesgo:</strong> Por $, %, o según el capital de la cuenta.</li>
+            <li><strong class="text-white">Perfiles guardables:</strong> Guarda configuraciones de riesgo por instrumento o estrategia.</li>
+            <li><strong class="text-white">Multi-cuenta:</strong> Compatible con TradeSyncer PRO y GP Firm Copier Pro para riesgo consistente en todas tus cuentas.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Para quién es?</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Traders que quieren <strong class="text-white">eliminar errores de cálculo</strong> de tamaño de posición.</li>
+            <li>Operadores de <strong class="text-white">prop firms</strong> que necesitan riesgo preciso por cuenta.</li>
+            <li>Traders que usan <strong class="text-white">múltiples estrategias</strong> y necesitan configuraciones de riesgo distintas para cada una.</li>
+            <li>Cualquiera que quiera <strong class="text-white">agilizar su entrada</strong> con OCO en un clic.</li>
+          </ul>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <p class="text-lg font-bold text-white">Controla tu riesgo en segundos</p>
+              <p class="text-xs text-gray-500">GPRiskReward — licencia vitalicia con actualizaciones gratuitas.</p>
+            </div>
+            <a href="/#detalle-riskreward" class="inline-flex items-center gap-2 px-6 py-4 text-sm font-semibold text-primary bg-accent rounded-full hover:bg-accent-400 transition-all min-h-[44px] shrink-0">Ver en acción <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

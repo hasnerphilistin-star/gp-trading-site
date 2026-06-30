@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Nexus Trend Engine — Motor de tendencias inteligente para NinjaTrader 8" description="Nexus Trend Engine es un motor de detección de tendencias multicapa que combina análisis de momentum, volumen y estructura de mercado. Ideal para swing trading en NT8.">
+  <Header />
+  <div id="main-content">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <a href="/blog" class="inline-flex items-center gap-1 text-sm text-accent hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Volver al blog
+        </a>
+      </div>
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-4">
+        <span class="px-2 py-0.5 text-accent bg-accent/10 border border-accent/20 rounded-full">Herramientas</span>
+        <span>30 Jun 2026</span>
+        <span>· 6 min lectura</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">Nexus Trend Engine</h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">Motor de detección de tendencias multicapa. Combina momentum, volumen y estructura de mercado para darte señales claras de entrada y salida.</p>
+      <div class="glass-card p-8 md:p-12 space-y-6 text-gray-300 text-sm leading-relaxed">
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Qué es Nexus Trend Engine?</h2>
+          <p>Nexus Trend Engine es un indicador de <strong class="text-white">detección de tendencias multicapa</strong> diseñado para NinjaTrader 8. A diferencia de los indicadores de tendencia tradicionales que se basan en un solo factor (como medias móviles), Nexus analiza simultáneamente tres capas: <strong class="text-white">momentum</strong>, <strong class="text-white">volumen</strong> y <strong class="text-white">estructura de mercado</strong>. Solo cuando las tres capas confirman la misma dirección, se genera una señal.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Las 3 capas de análisis</h2>
+          <h3 class="text-lg font-bold text-accent mb-2">1. Momentum</h3>
+          <p>Analiza la velocidad y aceleración del precio. No es un simple RSI o MACD: Nexus utiliza un algoritmo propio que mide la fuerza direccional eliminando el ruido de mercado. Detecta cuándo el momentum está aumentando (aceleración) o disminuyendo (agotamiento).</p>
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">2. Volumen</h3>
+          <p>No todo volumen es igual. Nexus distingue entre volumen de iniciación (acompaña la tendencia) y volumen de distribución (contra-tendencia). Cuando el volumen confirma la dirección del momentum, la señal se fortalece.</p>
+          <h3 class="text-lg font-bold text-accent mt-6 mb-2">3. Estructura de Mercado</h3>
+          <p>Analiza máximos y mínimos crecientes/decrecientes para determinar si la estructura general es alcista, bajista o lateral. Esta capa evita que entres en contra de la tendencia mayor.</p>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">Señales de Nexus Trend Engine</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">Flecha verde (Long):</strong> Las 3 capas confirman tendencia alcista. Entrada larga.</li>
+            <li><strong class="text-white">Flecha roja (Short):</strong> Las 3 capas confirman tendencia bajista. Entrada corta.</li>
+            <li><strong class="text-white">Círculo gris (Neutral):</strong> Las capas están en conflicto. No operar.</li>
+            <li><strong class="text-white">Línea de tendencia dinámica:</strong> La pendiente se ajusta en tiempo real según la fuerza de la tendencia.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-xl font-bold text-white mb-4">¿Para quién es?</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-white">Swing traders</strong> que buscan capturar tendencias de varios días.</li>
+            <li>Operadores de <strong class="text-white">position trading</strong> en timeframes de 1h a diario.</li>
+            <li>Traders que quieren <strong class="text-white">eliminar la subjetividad</strong> en la detección de tendencias.</li>
+            <li>Cualquiera que esté cansado de que las medias móviles den señales demasiado tarde.</li>
+          </ul>
+        </section>
+        <div class="border-t border-white/10 pt-6 mt-8">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <p class="text-lg font-bold text-white">Detecta tendencias antes que los demás</p>
+              <p class="text-xs text-gray-500">Nexus Trend Engine — licencia vitalicia con actualizaciones.</p>
+            </div>
+            <a href="/#detalle-nexus" class="inline-flex items-center gap-2 px-6 py-4 text-sm font-semibold text-primary bg-accent rounded-full hover:bg-accent-400 transition-all min-h-[44px] shrink-0">Ver en acción <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <Footer />
+</Layout>

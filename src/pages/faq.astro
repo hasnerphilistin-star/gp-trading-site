@@ -1,0 +1,171 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="FAQ e Instalación - GP Trading" description="Preguntas frecuentes sobre instalación, licencias y uso de la suite GP Trading para NinjaTrader 8. Guía paso a paso para instalar tus indicadores.">
+  <main class="pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1.5 text-xs font-mono text-accent bg-accent/10 border border-accent/20 rounded-full mb-4">
+          Soporte
+        </span>
+        <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-4">
+          FAQ e <span class="gradient-text">Instalación</span>
+        </h1>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          Todo lo que necesitas saber para instalar y usar la suite GP Trading en NinjaTrader 8.
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        <details class="glass-card p-6 md:p-8 group open:ring-1 open:ring-accent/30" open>
+          <summary class="text-lg font-bold text-white cursor-pointer select-none list-none flex items-center justify-between gap-4">
+            <span>¿Cómo instalo los indicadores en NinjaTrader 8?</span>
+            <svg class="w-5 h-5 text-accent shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-6 space-y-3 text-gray-300 text-sm leading-relaxed">
+            <p><strong class="text-white">Paso 1:</strong> Descarga el archivo <code class="text-accent bg-accent/10 px-1.5 py-0.5 rounded">.zip</code> que recibiste por correo después de la compra.</p>
+            <p><strong class="text-white">Paso 2:</strong> Descomprime el archivo. Verás una carpeta con los ensamblados <code class="text-accent bg-accent/10 px-1.5 py-0.5 rounded">.dll</code>.</p>
+            <p><strong class="text-white">Paso 3:</strong> Abre NinjaTrader 8 y ve a <code class="text-accent bg-accent/10 px-1.5 py-0.5 rounded">Nuevo > NinjaScript Editor</code> (o presiona <kbd class="text-accent bg-accent/10 px-1.5 py-0.5 rounded">F11</kbd>).</p>
+            <p><strong class="text-white">Paso 4:</strong> En el Panel de Navegación, haz clic derecho en <code class="text-accent bg-accent/10 px-1.5 py-0.5 rounded">Referencias</code> y selecciona <code class="text-accent bg-accent/10 px-1.5 py-0.5 rounded">Agregar Referencia</code>.</p>
+            <p><strong class="text-white">Paso 5:</strong> Navega a la carpeta donde descomprimiste los archivos, selecciona el <code class="text-accent bg-accent/10 px-1.5 py-0.5 rounded">.dll</code> correspondiente y haz clic en <strong>Aceptar</strong>.</p>
+            <p><strong class="text-white">Paso 6:</strong> Compila el NinjaScript Editor presionando <kbd class="text-accent bg-accent/10 px-1.5 py-0.5 rounded">F5</kbd>. Si no hay errores, los indicadores aparecerán en la lista de indicadores disponibles.</p>
+            <p><strong class="text-white">Paso 7:</strong> Arrastra el indicador desde la lista a tu gráfico. Cada herramienta tiene sus parámetros recomendados documentados en el manual incluido.</p>
+            <div class="mt-4 p-4 bg-accent/5 border border-accent/10 rounded-xl">
+              <p class="text-xs text-gray-400">⚠️ Si encuentras algún error durante la instalación, contáctanos por <a href="https://discord.com/invite/umVY4BQnKE" class="text-accent hover:underline" target="_blank" rel="noopener noreferrer">Discord</a> y te asistimos en minutos.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="glass-card p-6 md:p-8 group">
+          <summary class="text-lg font-bold text-white cursor-pointer select-none list-none flex items-center justify-between gap-4">
+            <span>¿Qué requisitos necesita mi PC?</span>
+            <svg class="w-5 h-5 text-accent shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-6 space-y-3 text-gray-300 text-sm leading-relaxed">
+            <ul class="space-y-2">
+              <li><strong class="text-white">Sistema Operativo:</strong> Windows 10 u 11 (64-bit). No compatible con Mac ni Linux.</li>
+              <li><strong class="text-white">NinjaTrader:</strong> Versión 8.1 o superior (recomendamos la última versión estable).</li>
+              <li><strong class="text-white">RAM:</strong> Mínimo 8 GB (16 GB recomendado para operar con múltiples herramientas activas).</li>
+              <li><strong class="text-white">Procesador:</strong> Intel i5 o equivalente. Para OmniFlow GFlow PRO v2.0 recomendamos i7 o superior.</li>
+              <li><strong class="text-white">Conexión:</strong> Internet estable con baja latencia.</li>
+              <li><strong class="text-white">Pantalla:</strong> Mínimo 1920x1080 para visualizar correctamente los paneles HUD.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="glass-card p-6 md:p-8 group">
+          <summary class="text-lg font-bold text-white cursor-pointer select-none list-none flex items-center justify-between gap-4">
+            <span>¿Cómo funcionan las licencias?</span>
+            <svg class="w-5 h-5 text-accent shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-6 space-y-3 text-gray-300 text-sm leading-relaxed">
+            <p>Cada licencia es <strong class="text-white">vitalicia</strong> y está vinculada a tu cuenta de NinjaTrader. No requiere renovación anual ni suscripción.</p>
+            <p class="mt-3">Incluye:</p>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>Actualizaciones gratuitas de por vida.</li>
+              <li>Soporte técnico prioritario vía Discord.</li>
+              <li>Instalación en un solo equipo por licencia.</li>
+            </ul>
+            <div class="mt-4 p-4 bg-gold/5 border border-gold/10 rounded-xl">
+              <p class="text-xs text-gray-400">💡 ¿Necesitas usar las herramientas en múltiples equipos? Consulta por nuestras licencias Enterprise.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="glass-card p-6 md:p-8 group">
+          <summary class="text-lg font-bold text-white cursor-pointer select-none list-none flex items-center justify-between gap-4">
+            <span>¿Ofrecen reembolsos?</span>
+            <svg class="w-5 h-5 text-accent shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-6 space-y-3 text-gray-300 text-sm leading-relaxed">
+            <p>Debido a la naturaleza digital de nuestros productos, <strong class="text-white">no ofrecemos reembolsos</strong> una vez entregada la licencia y los archivos de instalación.</p>
+            <p class="mt-3">Sin embargo, antes de comprar puedes:</p>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>Ver los videos demostrativos de cada herramienta en esta página.</li>
+              <li>Unirte a nuestro <a href="https://discord.com/invite/umVY4BQnKE" class="text-accent hover:underline" target="_blank" rel="noopener noreferrer">Discord</a> para ver las herramientas en acción con otros traders.</li>
+              <li>Contactarnos directamente por WhatsApp para resolver cualquier duda.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="glass-card p-6 md:p-8 group">
+          <summary class="text-lg font-bold text-white cursor-pointer select-none list-none flex items-center justify-between gap-4">
+            <span>¿Recibiré actualizaciones?</span>
+            <svg class="w-5 h-5 text-accent shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-6 space-y-3 text-gray-300 text-sm leading-relaxed">
+            <p>Sí. Todas las licencias incluyen <strong class="text-white">actualizaciones gratuitas de por vida</strong>. Cuando lancemos una nueva versión con mejoras, nuevas features o parches, recibirás un correo con el enlace de descarga.</p>
+            <p class="mt-3">Ejemplo: los compradores de GFlow Pro Premium recibieron automáticamente la actualización a OmniFlow GFlow X cuando se lanzó.</p>
+          </div>
+        </details>
+
+        <details class="glass-card p-6 md:p-8 group">
+          <summary class="text-lg font-bold text-white cursor-pointer select-none list-none flex items-center justify-between gap-4">
+            <span>¿Puedo usar las herramientas en cuentas de fondeo (prop firms)?</span>
+            <svg class="w-5 h-5 text-accent shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-6 space-y-3 text-gray-300 text-sm leading-relaxed">
+            <p><strong class="text-white">Sí, está diseñado para eso.</strong> Nuestras herramientas están optimizadas específicamente para traders de prop firms.</p>
+            <ul class="list-disc pl-6 space-y-1 mt-3">
+              <li>TradeSyncer PRO te permite copiar operaciones a 20+ cuentas simultáneamente con Daily Loss Limit integrado.</li>
+              <li>OmniFlow GFlow PRO v2.0 incluye el <strong class="text-white">"Modo Fondeo"</strong> con proyecciones TP1-TP4 adaptadas a los objetivos de las prop firms.</li>
+              <li>GPRiskReward automatiza el cálculo de lotaje para cumplir estrictamente con los límites de riesgo.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="glass-card p-6 md:p-8 group">
+          <summary class="text-lg font-bold text-white cursor-pointer select-none list-none flex items-center justify-between gap-4">
+            <span>¿Cómo recibo soporte técnico?</span>
+            <svg class="w-5 h-5 text-accent shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-6 space-y-3 text-gray-300 text-sm leading-relaxed">
+            <p>El soporte se brinda exclusivamente a través de <strong class="text-white">Discord</strong>. Tenemos canales dedicados para:</p>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>Instalación y configuración de herramientas.</li>
+              <li>Consultas técnicas sobre parámetros y uso.</li>
+              <li>Reporte de bugs y solicitudes de features.</li>
+              <li>Comunidad de traders para compartir estrategias.</li>
+            </ul>
+            <a href="https://discord.com/invite/umVY4BQnKE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 px-5 py-3 text-sm font-semibold text-primary bg-accent rounded-full hover:bg-accent-400 transition-all min-h-[44px]">
+              Unirse al Discord
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </details>
+
+        <details class="glass-card p-6 md:p-8 group">
+          <summary class="text-lg font-bold text-white cursor-pointer select-none list-none flex items-center justify-between gap-4">
+            <span>¿Los indicadores funcionan en modo Simulación?</span>
+            <svg class="w-5 h-5 text-accent shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-6 space-y-3 text-gray-300 text-sm leading-relaxed">
+            <p>Sí. Todos los indicadores funcionan tanto en <strong class="text-white">Simulación</strong> como en <strong class="text-white">Cuenta Real</strong>. No hay restricciones de modo de operación.</p>
+            <p class="mt-3">Recomendamos probar cada herramienta en Simulación durante al menos una semana para familiarizarte con sus parámetros y configuraciones antes de usarla en vivo.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="text-center mt-16">
+        <div class="glass-card p-8">
+          <h2 class="text-xl font-bold text-white mb-3">¿No encuentras lo que buscas?</h2>
+          <p class="text-gray-400 text-sm mb-6">Estamos en Discord para resolver cualquier duda.</p>
+          <a href="https://discord.com/invite/umVY4BQnKE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-4 text-sm font-semibold text-primary bg-accent rounded-full hover:bg-accent-400 transition-all min-h-[44px]">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
+            Soporte en Discord
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  details[open] summary svg {
+    transform: rotate(180deg);
+  }
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
