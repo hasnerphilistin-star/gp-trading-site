@@ -1,8 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="FAQ e Instalación - GP Trading" description="Preguntas frecuentes sobre instalación, licencias y uso de la suite GP Trading para NinjaTrader 8. Guía paso a paso para instalar tus indicadores.">
+  <Header />
+  <div id="main-content">
   <main class="pt-24 md:pt-32 pb-16 md:pb-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
@@ -159,6 +163,8 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </main>
+  </div>
+  <Footer />
 </Layout>
 
 <style is:global>
