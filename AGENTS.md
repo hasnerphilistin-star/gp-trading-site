@@ -12,7 +12,7 @@
   - 90 nuevos (día 31-120) — generados el 30 Jun 2026
 - `src/data/schedule.json` — plan de 120 artículos con campo `published`
 - `src/data/published.json` — artículos ya publicados (con `views`)
-- `scripts/publish-today.js` — mueve 1 draft/día, actualiza JSON, commit + push
+- `scripts/publish-today.cjs` — mueve 1 draft/día, actualiza JSON, commit + push (`.cjs` por `"type": "module"` en package.json)
 - `.github/workflows/daily-publish.yml` — GitHub Action cron 8am UTC
 - **Alternancia**: Herramientas ↔ Educación, con Ventaja Estadística intercalado
 - Categorías: "Herramientas", "Educación", "Ventaja Estadística"

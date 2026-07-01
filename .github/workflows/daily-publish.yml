@@ -30,6 +30,6 @@ jobs:
           git status
 
       - name: Publicar siguiente artículo
-        run: node scripts/publish-today.js
+        run: node scripts/publish-today.cjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
