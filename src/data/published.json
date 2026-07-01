@@ -1,25 +1,218 @@
 [
-  {"slug":"omniflow-gflow-pro-v2-guia-completa","title":"OmniFlow GFlow PRO v2.0 — La guía completa de la herramienta más avanzada de la suite","excerpt":"Descubre el panel HUD Direct2D, el Modo Dios, las Zonas Verificadas y cómo este motor matemático de Order Flow puede transformar tu trading.","date":"30 Jun 2026","readTime":"8 min","category":"Herramientas","views":1500},
-  {"slug":"order-flow-institucional-que-es-y-como-leerlo","title":"Order Flow Institucional: Qué es y cómo leerlo como un profesional","excerpt":"Aprende a identificar muros de liquidez, volumen anómalo y cinética de precios. La lectura de Order Flow que usan los traders institucionales.","date":"30 Jun 2026","readTime":"6 min","category":"Educación","views":890},
-  {"slug":"tradesyncer-pro-v2-guia-completa","title":"TradeSyncer PRO v2.0 — El copiador de operaciones más rápido para NinjaTrader 8","excerpt":"Copia trades en tiempo real entre cuentas con latencia ultra baja, sincronización bidireccional y Daily Loss Limit integrado.","date":"30 Jun 2026","readTime":"7 min","category":"Herramientas","views":1234},
-  {"slug":"errores-al-copiar-trades-y-como-evitarlos","title":"Los 3 errores más comunes al copiar trades y cómo evitarlos","excerpt":"Los fallos más frecuentes al copiar trades en múltiples cuentas: latencia, límites de pérdida y desincronización.","date":"30 Jun 2026","readTime":"5 min","category":"Educación","views":720},
-  {"slug":"gp-firm-copier-pro-guia","title":"GP Firm Copier Pro — Copia trades a 20+ cuentas con Daily Loss Limit","excerpt":"El copiador profesional para traders de prop firms con protección de riesgo integrada.","date":"30 Jun 2026","readTime":"6 min","category":"Herramientas","views":1100},
-  {"slug":"prop-firms-2026-evaluaciones","title":"Prop Firms 2026: Cómo pasar las evaluaciones con consistencia","excerpt":"Guía completa para aprobar evaluaciones de prop firms con estrategias y herramientas.","date":"30 Jun 2026","readTime":"7 min","category":"Educación","views":780},
-  {"slug":"gpriskreward-guia-completa","title":"GPRiskReward — Auto-Lotaje y OCO One-Click para gestión de riesgo perfecta","excerpt":"Calcula el tamaño de posición automáticamente y coloca TP y SL con un solo clic.","date":"30 Jun 2026","readTime":"6 min","category":"Herramientas","views":920},
-  {"slug":"risk-management-clave-trading-rentable","title":"Risk Management: La clave del trading rentable que nadie te enseña","excerpt":"El 80% de los traders fracasa por mala gestión de riesgo. Aprende las reglas de los profesionales.","date":"30 Jun 2026","readTime":"6 min","category":"Educación","views":840},
-  {"slug":"omniflow-gflow-x-guia","title":"OmniFlow GFlow X — Kinetic Singularity y proyecciones TP1-TP4 avanzadas","excerpt":"Order Flow de rango medio con detección de puntos de inflexión y panel HUD.","date":"30 Jun 2026","readTime":"6 min","category":"Herramientas","views":960},
-  {"slug":"volume-profile-huella-institucional","title":"Volume Profile: Cómo leer la huella institucional en tiempo real","excerpt":"Aprende a leer POC, Value Area y zonas de liquidez como un profesional.","date":"30 Jun 2026","readTime":"7 min","category":"Educación","views":870},
-  {"slug":"omniflow-quantum-prime-guia","title":"OmniFlow Quantum Prime — El algoritmo paramétrico definitivo para scalping","excerpt":"Algoritmo que se adapta a la volatilidad para señales de scalping precisas.","date":"30 Jun 2026","readTime":"6 min","category":"Herramientas","views":1050},
-  {"slug":"smc-smart-money-concepts-ninjatrader","title":"SMC: Smart Money Concepts explicado para traders de NinjaTrader 8","excerpt":"Aprende a identificar liquidez, FVG y cambios de carácter con herramientas reales.","date":"30 Jun 2026","readTime":"7 min","category":"Educación","views":930},
-  {"slug":"gflow-pro-premium-guia","title":"GFlow Pro Premium — Mapa de calor de liquidez institucional para NT8","excerpt":"Mapa de calor con detección de muros de oferta/demanda y confluencias.","date":"30 Jun 2026","readTime":"6 min","category":"Herramientas","views":850},
-  {"slug":"order-flow-ventaja-estadistica","title":"Cómo los indicadores de Order Flow mejoran tu ventaja estadística","excerpt":"El trading es una ecuación. El Order Flow mejora tu Win Rate y tu Ratio R:R.","date":"30 Jun 2026","readTime":"7 min","category":"Ventaja Estadística","views":700},
-  {"slug":"gp-vwap-clasico-guia","title":"GP VWAP Clásico — La herramienta de volumen institucional para day trading","excerpt":"VWAP con bandas de desviación, multi-período y señales de reversión.","date":"30 Jun 2026","readTime":"5 min","category":"Herramientas","views":780},
-  {"slug":"vwap-referencia-institucional","title":"VWAP: La referencia institucional que todo trader debe conocer","excerpt":"El indicador más usado por institucionales para medir precio justo.","date":"30 Jun 2026","readTime":"6 min","category":"Educación","views":650},
-  {"slug":"nexus-trend-engine-guia","title":"Nexus Trend Engine — Motor de tendencias inteligente para NinjaTrader 8","excerpt":"Motor multicapa que combina momentum, volumen y estructura de mercado.","date":"30 Jun 2026","readTime":"6 min","category":"Herramientas","views":820},
-  {"slug":"identificar-tendencias-temprano","title":"Cómo identificar tendencias temprano con herramientas de análisis técnico","excerpt":"Detecta tendencias antes de que se consoliden combinando estructura, volumen y momentum.","date":"30 Jun 2026","readTime":"6 min","category":"Educación","views":590},
-  {"slug":"specter-trend-cloud-guia","title":"Specter Trend Cloud — Nube de tendencia adaptativa con alertas inteligentes","excerpt":"Nube que cambia de color según la fuerza del mercado.","date":"30 Jun 2026","readTime":"5 min","category":"Herramientas","views":760},
-  {"slug":"confluencia-multiple-ventaja-estadistica","title":"La ventaja estadística de operar con confluencia múltiple de herramientas","excerpt":"Cuando varias herramientas señalan la misma dirección, la probabilidad se multiplica.","date":"30 Jun 2026","readTime":"7 min","category":"Ventaja Estadística","views":670},
-  {"slug":"gpcuantum-x-guia","title":"GPCuantum X — Análisis de mercado cuántico con proyecciones multi-timeframe","excerpt":"Analiza 3 timeframes simultáneamente con detección de confluencia.","date":"30 Jun 2026","readTime":"6 min","category":"Herramientas","views":880},
-  {"slug":"psicologia-trading-order-flow","title":"Psicología del trading: cómo el Order Flow reduce la incertidumbre","excerpt":"La incertidumbre genera malas decisiones. El Order Flow las reduce.","date":"30 Jun 2026","readTime":"6 min","category":"Educación","views":690},
-  {"slug":"ia-en-trading-2026-realidad","title":"IA en trading: qué es real y qué es hype en 2026","excerpt":"Separamos los mitos de la realidad sobre la IA aplicada al trading.","date":"30 Jun 2026","readTime":"7 min","category":"Educación","views":550}
+  {
+    "slug": "omniflow-gflow-pro-v2-guia-completa",
+    "title": "OmniFlow GFlow PRO v2.0 — La guía completa de la herramienta más avanzada de la suite",
+    "excerpt": "Descubre el panel HUD Direct2D, el Modo Dios, las Zonas Verificadas y cómo este motor matemático de Order Flow puede transformar tu trading.",
+    "date": "30 Jun 2026",
+    "readTime": "8 min",
+    "category": "Herramientas",
+    "views": 1500
+  },
+  {
+    "slug": "order-flow-institucional-que-es-y-como-leerlo",
+    "title": "Order Flow Institucional: Qué es y cómo leerlo como un profesional",
+    "excerpt": "Aprende a identificar muros de liquidez, volumen anómalo y cinética de precios. La lectura de Order Flow que usan los traders institucionales.",
+    "date": "30 Jun 2026",
+    "readTime": "6 min",
+    "category": "Educación",
+    "views": 890
+  },
+  {
+    "slug": "tradesyncer-pro-v2-guia-completa",
+    "title": "TradeSyncer PRO v2.0 — El copiador de operaciones más rápido para NinjaTrader 8",
+    "excerpt": "Copia trades en tiempo real entre cuentas con latencia ultra baja, sincronización bidireccional y Daily Loss Limit integrado.",
+    "date": "30 Jun 2026",
+    "readTime": "7 min",
+    "category": "Herramientas",
+    "views": 1234
+  },
+  {
+    "slug": "errores-al-copiar-trades-y-como-evitarlos",
+    "title": "Los 3 errores más comunes al copiar trades y cómo evitarlos",
+    "excerpt": "Los fallos más frecuentes al copiar trades en múltiples cuentas: latencia, límites de pérdida y desincronización.",
+    "date": "30 Jun 2026",
+    "readTime": "5 min",
+    "category": "Educación",
+    "views": 720
+  },
+  {
+    "slug": "gp-firm-copier-pro-guia",
+    "title": "GP Firm Copier Pro — Copia trades a 20+ cuentas con Daily Loss Limit",
+    "excerpt": "El copiador profesional para traders de prop firms con protección de riesgo integrada.",
+    "date": "30 Jun 2026",
+    "readTime": "6 min",
+    "category": "Herramientas",
+    "views": 1100
+  },
+  {
+    "slug": "prop-firms-2026-evaluaciones",
+    "title": "Prop Firms 2026: Cómo pasar las evaluaciones con consistencia",
+    "excerpt": "Guía completa para aprobar evaluaciones de prop firms con estrategias y herramientas.",
+    "date": "30 Jun 2026",
+    "readTime": "7 min",
+    "category": "Educación",
+    "views": 780
+  },
+  {
+    "slug": "gpriskreward-guia-completa",
+    "title": "GPRiskReward — Auto-Lotaje y OCO One-Click para gestión de riesgo perfecta",
+    "excerpt": "Calcula el tamaño de posición automáticamente y coloca TP y SL con un solo clic.",
+    "date": "30 Jun 2026",
+    "readTime": "6 min",
+    "category": "Herramientas",
+    "views": 920
+  },
+  {
+    "slug": "risk-management-clave-trading-rentable",
+    "title": "Risk Management: La clave del trading rentable que nadie te enseña",
+    "excerpt": "El 80% de los traders fracasa por mala gestión de riesgo. Aprende las reglas de los profesionales.",
+    "date": "30 Jun 2026",
+    "readTime": "6 min",
+    "category": "Educación",
+    "views": 840
+  },
+  {
+    "slug": "omniflow-gflow-x-guia",
+    "title": "OmniFlow GFlow X — Kinetic Singularity y proyecciones TP1-TP4 avanzadas",
+    "excerpt": "Order Flow de rango medio con detección de puntos de inflexión y panel HUD.",
+    "date": "30 Jun 2026",
+    "readTime": "6 min",
+    "category": "Herramientas",
+    "views": 960
+  },
+  {
+    "slug": "volume-profile-huella-institucional",
+    "title": "Volume Profile: Cómo leer la huella institucional en tiempo real",
+    "excerpt": "Aprende a leer POC, Value Area y zonas de liquidez como un profesional.",
+    "date": "30 Jun 2026",
+    "readTime": "7 min",
+    "category": "Educación",
+    "views": 870
+  },
+  {
+    "slug": "omniflow-quantum-prime-guia",
+    "title": "OmniFlow Quantum Prime — El algoritmo paramétrico definitivo para scalping",
+    "excerpt": "Algoritmo que se adapta a la volatilidad para señales de scalping precisas.",
+    "date": "30 Jun 2026",
+    "readTime": "6 min",
+    "category": "Herramientas",
+    "views": 1050
+  },
+  {
+    "slug": "smc-smart-money-concepts-ninjatrader",
+    "title": "SMC: Smart Money Concepts explicado para traders de NinjaTrader 8",
+    "excerpt": "Aprende a identificar liquidez, FVG y cambios de carácter con herramientas reales.",
+    "date": "30 Jun 2026",
+    "readTime": "7 min",
+    "category": "Educación",
+    "views": 930
+  },
+  {
+    "slug": "gflow-pro-premium-guia",
+    "title": "GFlow Pro Premium — Mapa de calor de liquidez institucional para NT8",
+    "excerpt": "Mapa de calor con detección de muros de oferta/demanda y confluencias.",
+    "date": "30 Jun 2026",
+    "readTime": "6 min",
+    "category": "Herramientas",
+    "views": 850
+  },
+  {
+    "slug": "order-flow-ventaja-estadistica",
+    "title": "Cómo los indicadores de Order Flow mejoran tu ventaja estadística",
+    "excerpt": "El trading es una ecuación. El Order Flow mejora tu Win Rate y tu Ratio R:R.",
+    "date": "30 Jun 2026",
+    "readTime": "7 min",
+    "category": "Ventaja Estadística",
+    "views": 700
+  },
+  {
+    "slug": "gp-vwap-clasico-guia",
+    "title": "GP VWAP Clásico — La herramienta de volumen institucional para day trading",
+    "excerpt": "VWAP con bandas de desviación, multi-período y señales de reversión.",
+    "date": "30 Jun 2026",
+    "readTime": "5 min",
+    "category": "Herramientas",
+    "views": 780
+  },
+  {
+    "slug": "vwap-referencia-institucional",
+    "title": "VWAP: La referencia institucional que todo trader debe conocer",
+    "excerpt": "El indicador más usado por institucionales para medir precio justo.",
+    "date": "30 Jun 2026",
+    "readTime": "6 min",
+    "category": "Educación",
+    "views": 650
+  },
+  {
+    "slug": "nexus-trend-engine-guia",
+    "title": "Nexus Trend Engine — Motor de tendencias inteligente para NinjaTrader 8",
+    "excerpt": "Motor multicapa que combina momentum, volumen y estructura de mercado.",
+    "date": "30 Jun 2026",
+    "readTime": "6 min",
+    "category": "Herramientas",
+    "views": 820
+  },
+  {
+    "slug": "identificar-tendencias-temprano",
+    "title": "Cómo identificar tendencias temprano con herramientas de análisis técnico",
+    "excerpt": "Detecta tendencias antes de que se consoliden combinando estructura, volumen y momentum.",
+    "date": "30 Jun 2026",
+    "readTime": "6 min",
+    "category": "Educación",
+    "views": 590
+  },
+  {
+    "slug": "specter-trend-cloud-guia",
+    "title": "Specter Trend Cloud — Nube de tendencia adaptativa con alertas inteligentes",
+    "excerpt": "Nube que cambia de color según la fuerza del mercado.",
+    "date": "30 Jun 2026",
+    "readTime": "5 min",
+    "category": "Herramientas",
+    "views": 760
+  },
+  {
+    "slug": "confluencia-multiple-ventaja-estadistica",
+    "title": "La ventaja estadística de operar con confluencia múltiple de herramientas",
+    "excerpt": "Cuando varias herramientas señalan la misma dirección, la probabilidad se multiplica.",
+    "date": "30 Jun 2026",
+    "readTime": "7 min",
+    "category": "Ventaja Estadística",
+    "views": 670
+  },
+  {
+    "slug": "gpcuantum-x-guia",
+    "title": "GPCuantum X — Análisis de mercado cuántico con proyecciones multi-timeframe",
+    "excerpt": "Analiza 3 timeframes simultáneamente con detección de confluencia.",
+    "date": "30 Jun 2026",
+    "readTime": "6 min",
+    "category": "Herramientas",
+    "views": 880
+  },
+  {
+    "slug": "psicologia-trading-order-flow",
+    "title": "Psicología del trading: cómo el Order Flow reduce la incertidumbre",
+    "excerpt": "La incertidumbre genera malas decisiones. El Order Flow las reduce.",
+    "date": "30 Jun 2026",
+    "readTime": "6 min",
+    "category": "Educación",
+    "views": 690
+  },
+  {
+    "slug": "ia-en-trading-2026-realidad",
+    "title": "IA en trading: qué es real y qué es hype en 2026",
+    "excerpt": "Separamos los mitos de la realidad sobre la IA aplicada al trading.",
+    "date": "30 Jun 2026",
+    "readTime": "7 min",
+    "category": "Educación",
+    "views": 550
+  },
+  {
+    "slug": "tradesyncer-prop-firms",
+    "title": "TradeSyncer PRO v2.0 — Guía para operar 10 cuentas de prop firms",
+    "excerpt": "Aprende a configurar TradeSyncer PRO v2.0 para operar múltiples cuentas de prop firms simultáneamente con Daily Loss Limit individual y sincronización perfecta.",
+    "date": "01 jul 2026",
+    "readTime": "6 min",
+    "category": "Herramientas",
+    "views": 0
+  }
 ]
