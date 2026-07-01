@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <baseDir>.</baseDir>
+  <outputDir>Confused</outputDir>
+
+  <!-- DLL del indicador -->
+  <module path="TuIndicador.dll">
+    <!-- REGLAS DE PRESERVACIÓN para NinjaTrader 8 -->
+
+    <!-- Regla global: ofuscar todo por defecto -->
+    <rule pattern="true" inherit="false">
+    </rule>
+
+    <!-- Preservar la clase principal del indicador (hereda de Indicator) -->
+    <rule pattern="public class * : NinjaTrader.Gui.NinjaScript.Indicator">
+      <protection action="remove" module="rename" />
+    </rule>
+
+    <!-- Preservar cualquier clase que termine en 'Indicator' -->
+    <rule pattern="public class *Indicator">
+      <protection action="remove" module="rename" />
+    </rule>
+
+    <!-- Preservar métodos sobreescritos de NT8 -->
+    <rule pattern="method *(OnStateChange|OnBarUpdate|OnRender|Initialize|Terminate)">
+      <protection action="remove" module="rename" />
+    </rule>
+
+    <!-- Preservar propiedades públicas (usadas por NT8 para la UI) -->
+    <rule pattern="property *">
+      <protection action="remove" module="rename" />
+    </rule>
+
+    <!-- Preservar atributos -->
+    <rule pattern="attribute *">
+      <protection action="remove" module="rename" />
+    </rule>
+
+    <!-- Preservar eventos públicos -->
+    <rule pattern="event *">
+      <protection action="remove" module="rename" />
+    </rule>
+
+    <!-- Preservar la clase de licencia para que no rompa la instanciación -->
+    <rule pattern="class LicenseValidator">
+      <protection action="remove" module="rename" />
+    </rule>
+    <rule pattern="class LicenseScreen">
+      <protection action="remove" module="rename" />
+    </rule>
+  </module>
+
+  <!-- Protecciones activadas -->
+  <protection id="anti debug" />
+  <protection id="anti tamper" />
+  <protection id="constants" />
+  <protection id="ctrl flow" />
+  <protection id="ref proxy" />
+  <protection id="rename" />
+</project>

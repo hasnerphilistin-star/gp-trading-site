@@ -91,3 +91,49 @@ CLOUDFLARE_API_TOKEN="<token>" CLOUDFLARE_ACCOUNT_ID="ef1bfef4d6dce5b041f0de5bc1
 - Google Search Console: verificación completada, sitemap enviado
 - Build: 30 páginas, 0 errores
 - Deploy manual necesario (auto-deploy de GitHub inestable)
+
+### 30 Jun 2026 — Fix scroll + highlight "Ver precios"
+- Bug: clic en "Ver precios" no siempre scrolleaba ni animaba el precio correcto
+- Causa: event listener genérico en `document` con `closest('[data-precio]')` interfería con otros handlers del carrusel
+- Fix: cada link ahora usa `onclick="goToPrice('producto');return false;"` y la función global `window.goToPrice` definida en Pricing.astro
+- `data-precio` eliminado de los links; ya no es necesario
+- Deploy manual exitoso a Cloudflare Pages
+
+### 30 Jun 2026 — Plan de protección de código + licencias NT8
+- PDF generado: `~/Downloads/Plan_Proteccion_Codigo_Licencias_GP_Trading.pdf` (17 págs, 98 KB)
+- Ofuscación con **ConfuserEx** (gratuito, open source) con reglas de preservación para NT8
+- Sistema de **License Key único** por indicador: `SHA256(NT8 Account ID + Product ID + SecretSalt)`
+- Formato: `GPTR-XXXXX-XXXXX-XXXXX-XXXXX`, almacenado en `...\NinjaTrader 8\bin\Custom\Licenses\<product>.lic`
+- Cada DLL valida la licencia al cargar vs el Account ID de NT8; si falla, no dibuja nada
+- Tool interna de generación (console app) + BD SQLite de auditoría para prevenir duplicados
+- Proceso manual de 6-12h: pago → alerta Discord → generar licencia → email al cliente con DLL + .lic
+- Plan a futuro: automatizar con Binance Pay + Cloudflare Worker + Phone Home opcional
+
+### 1 Jul 2026 — Sistema completo de protección y licencias
+- **`security/`** — Nuevo directorio con el sistema de licencias completo
+- `security/LicenseValidatorTemplate.cs` — Template C# para integrar en cada DLL:
+  - Validación offline contra archivo `.lic` en `...\Licenses\<product>.lic`
+  - **3 días de prueba** automáticos al primer uso (crea archivo `.trial`)
+  - Banner "Prueba: X días restantes" en gold (arriba derecha) durante el trial
+  - Pantalla de bloqueo centrada con logo GP Trading, mensaje de contacto,
+    email, Discord, Instagram, Telegram, YouTube (sin WhatsApp)
+  - Colores corporativos: accent `#00d4aa`, gold `#f59e0b`, bg `#0a0a0a`
+- `security/license-generator.html` — Página web admin para generar licencias:
+  - Interfaz profesional dark con glassmorphism, animaciones, stats
+  - Dropdown de los 11 productos, inputs para Account ID, email, nombre
+  - Genera License Key con SHA-256, animación de caracteres
+  - Copia al portapapeles, descarga `.lic`, historial persistente (localStorage)
+  - Footer con todas las redes sociales (sin WhatsApp)
+- `security/confuserex-config.crproj` — Config de ConfuserEx con reglas de preservación NT8:
+  - Renaming, Control Flow, Constants/strings encryption, Anti Debug, Anti Tamper, Ref Proxy
+  - Preserva: clase Indicator, OnStateChange, OnBarUpdate, OnRender, propiedades, atributos
+  - Preserva LicenseValidator para no romper instanciación
+- `security/gen-license.py` — Script CLI Python:
+  - `--account`, `--product`, `--email`, `--name`, `--list`, `--revoke`
+  - Guarda en SQLite (`licencias.db`), genera archivo `.lic`
+  - Modo --no-save para solo mostrar
+  - Variable de entorno `GPT_LICENSE_SECRET` para el master secret
+- `security/license-db-schema.sql` — Esquema SQLite con tablas `licencias` y `orders`
+- `security/README.md` — Guía completa de integración paso a paso
+- **Flujo**: DLL sin licencia → 3 días trial → pantalla de bloqueo con branding → contacto
+- **Master secret** reemplazable en cada DLL compilada; nunca va en código cliente

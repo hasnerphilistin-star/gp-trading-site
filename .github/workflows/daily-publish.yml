@@ -5,18 +5,31 @@ on:
     - cron: '0 8 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+          persist-credentials: true
 
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 20
+
+      - name: Configurar git
+        run: |
+          git config user.name "GP Trading Bot"
+          git config user.email "bot@gptradingfx.pages.dev"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git status
 
       - name: Publicar siguiente artículo
         run: node scripts/publish-today.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

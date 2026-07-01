@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const SCHEDULE_PATH = 'src/data/schedule.json';
 const PUBLISHED_PATH = 'src/data/published.json';
@@ -8,35 +9,63 @@ const DRAFTS_DIR = 'drafts';
 const BLOG_DIR = 'src/pages/blog';
 
 function main() {
-  const schedule = JSON.parse(fs.readFileSync(SCHEDULE_PATH, 'utf8'));
-  const next = schedule.find(item => !item.published);
-  if (!next) {
-    console.log('No hay más artículos programados.');
-    return;
-  }
-
-  const draftFile = path.join(DRAFTS_DIR, `${String(next.day).padStart(2, '0')}-${next.slug}.astro`);
-  if (!fs.existsSync(draftFile)) {
-    console.error(`Draft no encontrado: ${draftFile}`);
+  if (!fs.existsSync(SCHEDULE_PATH)) {
+    console.error(`ERROR: No se encuentra ${SCHEDULE_PATH}`);
     process.exit(1);
   }
 
+  const schedule = JSON.parse(fs.readFileSync(SCHEDULE_PATH, 'utf8'));
+  const next = schedule.find(item => !item.published);
+
+  if (!next) {
+    console.log('No hay más artículos programados.');
+    process.exit(0);
+  }
+
+  const dayPadded = String(next.day).padStart(2, '0');
+  const draftFile = path.join(DRAFTS_DIR, `${dayPadded}-${next.slug}.astro`);
   const destFile = path.join(BLOG_DIR, `${next.slug}.astro`);
+
+  if (!fs.existsSync(draftFile)) {
+    console.error(`ERROR: Draft no encontrado: ${draftFile}`);
+    process.exit(1);
+  }
+
+  if (fs.existsSync(destFile)) {
+    console.log(`El artículo ya existe en blog/: ${destFile}`);
+    console.log('Se sobrescribirá con la versión del draft.');
+  }
+
   fs.copyFileSync(draftFile, destFile);
   console.log(`Copiado: ${draftFile} → ${destFile}`);
+
+  const published = JSON.parse(fs.readFileSync(PUBLISHED_PATH, 'utf8'));
+  const exists = published.some(e => e.slug === next.slug);
+  if (exists) {
+    console.log(`El slug ya existe en published.json, se actualizará la entrada.`);
+  }
 
   const entry = {
     slug: next.slug,
     title: next.title,
     excerpt: next.excerpt || '',
-    date: new Date().toLocaleDateString('es-ES', { day: '2-digit', month: 'short', year: 'numeric' }).replace('.', ''),
+    date: new Date().toLocaleDateString('es-ES', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    }).replace('.', ''),
     readTime: next.readTime,
     category: next.category,
     views: 0
   };
 
-  const published = JSON.parse(fs.readFileSync(PUBLISHED_PATH, 'utf8'));
-  published.push(entry);
+  if (exists) {
+    const idx = published.findIndex(e => e.slug === next.slug);
+    published[idx] = { ...published[idx], ...entry };
+  } else {
+    published.push(entry);
+  }
+
   fs.writeFileSync(PUBLISHED_PATH, JSON.stringify(published, null, 2));
   console.log(`Registrado en published.json: ${entry.slug}`);
 
@@ -44,12 +73,22 @@ function main() {
   fs.writeFileSync(SCHEDULE_PATH, JSON.stringify(schedule, null, 2));
   console.log(`Marcado como publicado en schedule.json.`);
 
-  const { execSync } = require('child_process');
-  execSync(`git add ${destFile} ${PUBLISHED_PATH} ${SCHEDULE_PATH}`, { stdio: 'inherit' });
-  execSync(`git commit -m "Publicar: ${entry.title}"`, { stdio: 'inherit' });
-  execSync('git push', { stdio: 'inherit' });
+  try {
+    execSync(`git add "${destFile}" "${PUBLISHED_PATH}" "${SCHEDULE_PATH}"`, { stdio: 'inherit' });
+    try {
+      const diff = execSync('git diff --cached --stat', { encoding: 'utf8' });
+      console.log('Cambios a commitear:\n' + diff);
+    } catch (_) {}
 
-  console.log(`\n✓ "${entry.title}" publicado y subido a GitHub. Cloudflare lo desplegará en breve.`);
+    execSync(`git commit -m "Publicar: ${entry.title}"`, { stdio: 'inherit' });
+    execSync('git push', { stdio: 'inherit' });
+
+    console.log(`\n✓ "${entry.title}" publicado y subido a GitHub.`);
+  } catch (err) {
+    console.error('\n✗ Error en git push:', err.message);
+    console.log('Los archivos fueron modificados localmente pero no se pudieron subir.');
+    process.exit(1);
+  }
 }
 
 main();

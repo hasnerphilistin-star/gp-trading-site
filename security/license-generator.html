@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GP Trading — Generador de Licencias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --surface-2: #1a1a1a;
+  --border: rgba(255,255,255,0.08);
+  --border-hover: rgba(0,212,170,0.3);
+  --text: #ffffff;
+  --text-muted: #888888;
+  --accent: #00d4aa;
+  --accent-hover: #00f0c0;
+  --gold: #f59e0b;
+  --gold-hover: #fbbf24;
+  --danger: #ef4444;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Background effects */
+.bg-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+.bg-glow-1 {
+  width: 500px; height: 500px;
+  background: rgba(0,212,170,0.06);
+  top: -200px; right: -200px;
+}
+.bg-glow-2 {
+  width: 400px; height: 400px;
+  background: rgba(245,158,11,0.04);
+  bottom: -150px; left: -150px;
+}
+
+/* Layout */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.header {
+  padding: 32px 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.header-logo {
+  width: 36px; height: 36px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--bg);
+}
+.header-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.header-title span { color: var(--accent); }
+.header-badge {
+  font-size: 11px;
+  padding: 4px 12px;
+  background: rgba(0,212,170,0.1);
+  border: 1px solid rgba(0,212,170,0.2);
+  border-radius: 20px;
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Page title */
+.page-title {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.page-title h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.page-title h1 span {
+  background: linear-gradient(135deg, var(--accent), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.page-title p {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+@media (max-width: 800px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* Glass card */
+.card {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 32px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 0 40px rgba(0,212,170,0.05);
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.card-header svg {
+  width: 20px; height: 20px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.card-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group:last-child { margin-bottom: 0; }
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.form-select, .form-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  transition: all 0.25s ease;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23888' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+}
+.form-select:focus, .form-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0,212,170,0.1);
+}
+.form-input::placeholder { color: #555; }
+.form-input-mono { font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+
+/* Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  width: 100%;
+  touch-action: manipulation;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg);
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(0,212,170,0.25);
+}
+.btn-primary:active { transform: scale(0.98); }
+.btn-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn-secondary:hover {
+  border-color: var(--accent);
+  background: var(--surface-2);
+}
+.btn-icon {
+  width: 40px; height: 40px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Result card */
+.result-card {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(0,212,170,0.05);
+  border: 1px solid rgba(0,212,170,0.15);
+  border-radius: 12px;
+  display: none;
+}
+.result-card.visible { display: block; animation: fadeIn 0.4s ease; }
+.result-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+.result-key {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 1px;
+  word-break: break-all;
+  padding: 12px 0;
+}
+.result-detail {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+.result-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+.result-actions .btn { flex: 1; }
+
+/* License key animation */
+.key-char {
+  display: inline-block;
+  animation: keyPop 0.3s ease both;
+}
+@keyframes keyPop {
+  0% { opacity: 0; transform: translateY(10px) scale(0.8); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* History table */
+.history-section { margin-top: 16px; }
+.history-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-muted);
+}
+.history-empty svg { width: 48px; height: 48px; opacity: 0.3; margin-bottom: 12px; }
+.history-empty p { font-size: 14px; }
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.history-table th {
+  text-align: left;
+  padding: 10px 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border);
+}
+.history-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  vertical-align: middle;
+}
+.history-table tr:hover td { background: rgba(255,255,255,0.02); }
+.history-key {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--gold);
+}
+.history-product {
+  font-size: 12px;
+}
+.history-date {
+  color: var(--text-muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+.history-account {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.history-actions {
+  display: flex;
+  gap: 6px;
+}
+.history-actions button {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 11px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+.history-actions button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.history-actions button.danger:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 14px 24px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px;
+  color: var(--text);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.toast.visible { transform: translateY(0); opacity: 1; }
+.toast-success { border-color: var(--accent); }
+.toast-error { border-color: var(--danger); }
+.toast-icon { font-size: 18px; }
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 16px;
+}
+.footer p {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+.footer-social a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,212,170,0.1);
+}
+.footer-social svg { width: 20px; height: 20px; }
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 12px;
+  margin: 0 8px;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--accent); }
+
+/* Stats bar */
+.stats-bar {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+.stat-item {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  padding: 16px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.stat-number {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-in { animation: fadeIn 0.5s ease both; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+
+/* Clear history btn */
+.clear-btn {
+  background: none;
+  border: none;
+  color: var(--danger);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+  opacity: 0.6;
+}
+.clear-btn:hover { opacity: 1; background: rgba(239,68,68,0.1); }
+
+/* Search input */
+.search-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-family: 'Inter', sans-serif;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  outline: none;
+  transition: all 0.25s;
+  margin-bottom: 12px;
+}
+.search-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0,212,170,0.1);
+}
+.search-input::placeholder { color: #555; }
+
+/* Responsive table */
+@media (max-width: 600px) {
+  .history-table th:nth-child(3),
+  .history-table td:nth-child(3) { display: none; }
+  .history-table th,
+  .history-table td { padding: 8px 6px; font-size: 11px; }
+  .result-key { font-size: 14px; }
+  .card { padding: 20px; }
+  .page-title h1 { font-size: 24px; }
+}
+</style>
+</head>
+<body>
+
+<div class="bg-glow bg-glow-1"></div>
+<div class="bg-glow bg-glow-2"></div>
+
+<div class="container">
+  <!-- Header -->
+  <header class="header animate-in">
+    <a href="#" class="header-brand">
+      <div class="header-logo">GP</div>
+      <span class="header-title">GP <span>Trading</span></span>
+    </a>
+    <span class="header-badge">Admin Panel</span>
+  </header>
+
+  <!-- Title -->
+  <div class="page-title animate-in delay-1">
+    <h1>Generador de <span>Licencias</span></h1>
+    <p>Sistema interno de generación y auditoría de licenses keys para NT8</p>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-bar animate-in delay-2" id="statsBar">
+    <div class="stat-item">
+      <div class="stat-number" id="statTotal">0</div>
+      <div class="stat-label">Licencias Emitidas</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" id="statToday">0</div>
+      <div class="stat-label">Hoy</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" id="statProducts">11</div>
+      <div class="stat-label">Productos</div>
+    </div>
+  </div>
+
+  <!-- Main Grid -->
+  <div class="grid">
+    <!-- LEFT: Generator -->
+    <div class="card animate-in delay-2">
+      <div class="card-header">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+        <h2>Generar Nueva Licencia</h2>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="productSelect">Producto</label>
+        <select class="form-select" id="productSelect">
+          <option value="tradesyncer">TradeSyncer PRO v2.0</option>
+          <option value="firmcopier">GP Firm Copier Pro</option>
+          <option value="riskreward">GPRiskReward</option>
+          <option value="gflowpro">OmniFlow GFlow PRO v2.0</option>
+          <option value="gflowx">OmniFlow GFlow X</option>
+          <option value="quantumprime">OmniFlow Quantum Prime</option>
+          <option value="gflowpremium">GFlow Pro Premium</option>
+          <option value="vpwap">GP VWAP Clásico</option>
+          <option value="nexus">Nexus Trend Engine</option>
+          <option value="specter">Specter Trend Cloud</option>
+          <option value="gpcuantum">GPCuantum X</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="accountInput">NT8 Account ID</label>
+        <input class="form-input form-input-mono" id="accountInput" type="text" placeholder="ej: sim-12345678" autocomplete="off" spellcheck="false">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="emailInput">Email del Cliente</label>
+        <input class="form-input" id="emailInput" type="email" placeholder="cliente@email.com" autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="clientNameInput">Nombre del Cliente</label>
+        <input class="form-input" id="clientNameInput" type="text" placeholder="Nombre y apellido" autocomplete="off">
+      </div>
+
+      <button class="btn btn-primary" id="generateBtn">
+        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        Generar Licencia
+      </button>
+
+      <div class="result-card" id="resultCard">
+        <div class="result-label">License Key</div>
+        <div class="result-key" id="resultKey"></div>
+        <div class="result-detail" id="resultDetail"></div>
+        <div class="result-actions">
+          <button class="btn btn-secondary" id="copyBtn">
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            Copiar
+          </button>
+          <button class="btn btn-secondary" id="downloadBtn">
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Descargar .lic
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: History -->
+    <div class="card animate-in delay-3">
+      <div class="card-header">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+        <h2>Historial de Licencias</h2>
+        <button class="clear-btn" id="clearHistoryBtn" title="Limpiar historial">Limpiar</button>
+      </div>
+
+      <input class="search-input" id="searchHistory" type="text" placeholder="Buscar por Account ID, email o producto...">
+
+      <div class="history-section" id="historySection">
+        <div class="history-empty" id="emptyState">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/></svg>
+          <p>Aún no se han generado licencias</p>
+        </div>
+        <div style="overflow-x:auto; display:none;" id="tableWrapper">
+          <table class="history-table">
+            <thead>
+              <tr>
+                <th>License Key</th>
+                <th>Producto</th>
+                <th>Account ID</th>
+                <th>Cliente</th>
+                <th>Fecha</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="historyBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-social">
+      <a href="mailto:gptradingacademy@proton.me" target="_blank" aria-label="Email">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      </a>
+      <a href="https://discord.com/invite/umVY4BQnKE" target="_blank" aria-label="Discord">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/gptradingfx/" target="_blank" aria-label="Instagram">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://t.me/gptradinggratis" target="_blank" aria-label="Telegram">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@GPTradingFX" target="_blank" aria-label="YouTube">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+    </div>
+    <p>GP Trading Academy — gptradingfx.pages.dev</p>
+    <div class="footer-links">
+      <span>GP Trading &copy; 2026</span>
+      <span>&middot;</span>
+      <span>Uso interno exclusivo</span>
+    </div>
+  </footer>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <span class="toast-icon" id="toastIcon">&#10003;</span>
+  <span id="toastMessage">Copiado al portapapeles</span>
+</div>
+
+<script>
+(function() {
+  const PRODUCTS = {
+    tradesyncer: 'TradeSyncer PRO v2.0',
+    firmcopier: 'GP Firm Copier Pro',
+    riskreward: 'GPRiskReward',
+    gflowpro: 'OmniFlow GFlow PRO v2.0',
+    gflowx: 'OmniFlow GFlow X',
+    quantumprime: 'OmniFlow Quantum Prime',
+    gflowpremium: 'GFlow Pro Premium',
+    vpwap: 'GP VWAP Clásico',
+    nexus: 'Nexus Trend Engine',
+    specter: 'Specter Trend Cloud',
+    gpcuantum: 'GPCuantum X'
+  };
+
+  const STORAGE_KEY = 'gp_licenses_history';
+  const MASTER_SECRET = '__MASTER_SECRET__';
+
+  function getHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch { return []; }
+  }
+
+  function saveHistory(data) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  }
+
+  function generateKey(accountId, productId) {
+    const data = accountId + '|' + productId + '|' + MASTER_SECRET;
+    const encoder = new TextEncoder();
+    return crypto.subtle.digest('SHA-256', encoder.encode(data)).then(function(hash) {
+      const hex = Array.from(new Uint8Array(hash))
+        .map(function(b) { return b.toString(16).padStart(2, '0').toUpperCase(); })
+        .join('');
+      return 'GPTR-'
+        + hex.substring(0, 5) + '-'
+        + hex.substring(5, 10) + '-'
+        + hex.substring(10, 15) + '-'
+        + hex.substring(15, 20);
+    });
+  }
+
+  function formatDate(date) {
+    return date.toLocaleString('es-ES', {
+      year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit'
+    });
+  }
+
+  function isToday(date) {
+    const now = new Date();
+    return date.getDate() === now.getDate()
+      && date.getMonth() === now.getMonth()
+      && date.getFullYear() === now.getFullYear();
+  }
+
+  function showToast(message, type) {
+    var toast = document.getElementById('toast');
+    var icon = document.getElementById('toastIcon');
+    var msg = document.getElementById('toastMessage');
+    toast.className = 'toast visible ' + (type === 'error' ? 'toast-error' : 'toast-success');
+    icon.textContent = type === 'error' ? '\u2716' : '\u2713';
+    msg.textContent = message;
+    clearTimeout(toast._timeout);
+    toast._timeout = setTimeout(function() { toast.className = 'toast'; }, 3000);
+  }
+
+  function renderHistory(filter) {
+    var history = getHistory();
+    var emptyState = document.getElementById('emptyState');
+    var tableWrapper = document.getElementById('tableWrapper');
+    var tbody = document.getElementById('historyBody');
+
+    if (filter) {
+      var f = filter.toLowerCase();
+      history = history.filter(function(item) {
+        return (item.account || '').toLowerCase().includes(f)
+          || (item.email || '').toLowerCase().includes(f)
+          || (item.productName || '').toLowerCase().includes(f)
+          || (item.clientName || '').toLowerCase().includes(f)
+          || (item.key || '').toLowerCase().includes(f);
+      });
+    }
+
+    history.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
+
+    if (history.length === 0) {
+      emptyState.style.display = 'block';
+      tableWrapper.style.display = 'none';
+    } else {
+      emptyState.style.display = 'none';
+      tableWrapper.style.display = 'block';
+      tbody.innerHTML = history.map(function(item, idx) {
+        var date = new Date(item.date);
+        return '<tr>'
+          + '<td class="history-key">' + escapeHtml(item.key) + '</td>'
+          + '<td class="history-product">' + escapeHtml(item.productName) + '</td>'
+          + '<td class="history-account">' + escapeHtml(item.account) + '</td>'
+          + '<td style="font-size:12px">' + escapeHtml(item.clientName || item.email || '-') + '</td>'
+          + '<td class="history-date">' + formatDate(date) + '</td>'
+          + '<td class="history-actions">'
+          +   '<button onclick="window._copyKey(\'' + escapeHtml(item.key) + '\')" title="Copiar">Copiar</button>'
+          +   '<button onclick="window._deleteKey(' + idx + ')" class="danger" title="Eliminar">Eliminar</button>'
+          + '</td>'
+          + '</tr>';
+      }).join('');
+    }
+
+    updateStats(history);
+  }
+
+  function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function updateStats(allHistory) {
+    document.getElementById('statTotal').textContent = allHistory.length;
+    document.getElementById('statToday').textContent = allHistory.filter(function(item) {
+      return isToday(new Date(item.date));
+    }).length;
+  }
+
+  window._copyKey = function(key) {
+    navigator.clipboard.writeText(key).then(function() {
+      showToast('License Key copiado al portapapeles', 'success');
+    }).catch(function() {
+      showToast('Error al copiar', 'error');
+    });
+  };
+
+  window._deleteKey = function(idx) {
+    var history = getHistory();
+    if (idx >= 0 && idx < history.length) {
+      history.splice(idx, 1);
+      saveHistory(history);
+      renderHistory(document.getElementById('searchHistory').value);
+      showToast('Licencia eliminada del historial', 'success');
+    }
+  };
+
+  document.getElementById('generateBtn').addEventListener('click', function() {
+    var btn = this;
+    var productId = document.getElementById('productSelect').value;
+    var account = document.getElementById('accountInput').value.trim();
+    var email = document.getElementById('emailInput').value.trim();
+    var clientName = document.getElementById('clientNameInput').value.trim();
+
+    if (!account) {
+      showToast('Ingresa el NT8 Account ID', 'error');
+      document.getElementById('accountInput').focus();
+      return;
+    }
+
+    if (!email) {
+      showToast('Ingresa el email del cliente', 'error');
+      document.getElementById('emailInput').focus();
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Generando...';
+
+    generateKey(account, productId).then(function(key) {
+      var productName = PRODUCTS[productId] || productId;
+      var entry = {
+        key: key,
+        product: productId,
+        productName: productName,
+        account: account,
+        email: email,
+        clientName: clientName || email,
+        date: new Date().toISOString()
+      };
+
+      var history = getHistory();
+      history.push(entry);
+      saveHistory(history);
+
+      var resultCard = document.getElementById('resultCard');
+      var resultKey = document.getElementById('resultKey');
+      var resultDetail = document.getElementById('resultDetail');
+
+      resultKey.textContent = key;
+
+      var chars = key.split('');
+      resultKey.innerHTML = '';
+      chars.forEach(function(ch, i) {
+        var span = document.createElement('span');
+        span.className = 'key-char';
+        span.textContent = ch;
+        span.style.animationDelay = (i * 30) + 'ms';
+        resultKey.appendChild(span);
+      });
+
+      resultDetail.innerHTML = '<strong>Producto:</strong> ' + escapeHtml(productName)
+        + '<br><strong>Account ID:</strong> ' + escapeHtml(account)
+        + '<br><strong>Cliente:</strong> ' + escapeHtml(clientName || email)
+        + '<br><strong>Archivo:</strong> ' + escapeHtml(productId) + '.lic';
+
+      resultCard.classList.add('visible');
+      renderHistory(document.getElementById('searchHistory').value);
+      showToast('Licencia generada exitosamente', 'success');
+
+      btn.disabled = false;
+      btn.innerHTML = '<svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>\nGenerar Licencia';
+    }).catch(function() {
+      showToast('Error al generar la licencia', 'error');
+      btn.disabled = false;
+      btn.innerHTML = '<svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>\nGenerar Licencia';
+    });
+  });
+
+  document.getElementById('copyBtn').addEventListener('click', function() {
+    var key = document.getElementById('resultKey').textContent;
+    if (key) {
+      navigator.clipboard.writeText(key).then(function() {
+        showToast('License Key copiado al portapapeles', 'success');
+      });
+    }
+  });
+
+  document.getElementById('downloadBtn').addEventListener('click', function() {
+    var key = document.getElementById('resultKey').textContent;
+    var productId = document.getElementById('productSelect').value;
+    if (key) {
+      var blob = new Blob([key], { type: 'text/plain;charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = productId + '.lic';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast('Archivo .lic descargado', 'success');
+    }
+  });
+
+  document.getElementById('clearHistoryBtn').addEventListener('click', function() {
+    if (confirm('¿Eliminar todo el historial de licencias?')) {
+      saveHistory([]);
+      renderHistory('');
+      document.getElementById('resultCard').classList.remove('visible');
+      showToast('Historial limpiado', 'success');
+    }
+  });
+
+  document.getElementById('searchHistory').addEventListener('input', function() {
+    renderHistory(this.value);
+  });
+
+  renderHistory('');
+})();
+</script>
+</body>
+</html>
