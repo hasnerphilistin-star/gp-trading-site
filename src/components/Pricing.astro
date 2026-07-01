@@ -166,21 +166,12 @@
     if (!link) return;
     e.preventDefault();
     var product = link.getAttribute('data-precio');
-    var pricingSection = document.getElementById('precios');
-    if (!pricingSection) return;
-    pricingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     var target = document.getElementById('precio-' + product);
     if (!target) return;
-    var checkExist = setInterval(function () {
-      var rect = target.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        clearInterval(checkExist);
-        target.classList.add('precio-highlight');
-        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        setTimeout(function () {
-          target.classList.remove('precio-highlight');
-        }, 3500);
-      }
-    }, 100);
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    target.classList.add('precio-highlight');
+    setTimeout(function () {
+      target.classList.remove('precio-highlight');
+    }, 3500);
   });
 </script>
