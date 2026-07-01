@@ -147,3 +147,40 @@
     </div>
   </div>
 </section>
+
+<style is:global>
+  .precio-highlight {
+    animation: precio-pulse 3s ease-in-out;
+  }
+  @keyframes precio-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(0, 212, 170, 0); border-color: rgba(255,255,255,0.1); }
+    15% { box-shadow: 0 0 20px 4px rgba(0, 212, 170, 0.3); border-color: rgba(0, 212, 170, 0.5); transform: scale(1.02); }
+    30% { box-shadow: 0 0 15px 2px rgba(0, 212, 170, 0.2); border-color: rgba(0, 212, 170, 0.3); transform: scale(1.01); }
+    60% { box-shadow: 0 0 10px 1px rgba(0, 212, 170, 0.1); border-color: rgba(0, 212, 170, 0.2); }
+  }
+</style>
+
+<script>
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('[data-precio]');
+    if (!link) return;
+    e.preventDefault();
+    var product = link.getAttribute('data-precio');
+    var pricingSection = document.getElementById('precios');
+    if (!pricingSection) return;
+    pricingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    var target = document.getElementById('precio-' + product);
+    if (!target) return;
+    var checkExist = setInterval(function () {
+      var rect = target.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        clearInterval(checkExist);
+        target.classList.add('precio-highlight');
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(function () {
+          target.classList.remove('precio-highlight');
+        }, 3500);
+      }
+    }, 100);
+  });
+</script>
