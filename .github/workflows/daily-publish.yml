@@ -3,6 +3,7 @@ name: Publicar artículo diario
 on:
   schedule:
     - cron: '0 8 * * *'
+    - cron: '0 14 * * *'
   workflow_dispatch:
 
 permissions:
@@ -26,10 +27,8 @@ jobs:
         run: |
           git config user.name "GP Trading Bot"
           git config user.email "bot@gptradingfx.pages.dev"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          git status
 
       - name: Publicar siguiente artículo
         run: node scripts/publish-today.cjs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}

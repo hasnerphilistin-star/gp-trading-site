@@ -75,12 +75,17 @@ function main() {
 
   try {
     execSync(`git add "${destFile}" "${PUBLISHED_PATH}" "${SCHEDULE_PATH}"`, { stdio: 'inherit' });
-    try {
-      const diff = execSync('git diff --cached --stat', { encoding: 'utf8' });
-      console.log('Cambios a commitear:\n' + diff);
-    } catch (_) {}
+
+    const hasChanges = execSync('git diff --cached --stat', { encoding: 'utf8' }).trim();
+    if (!hasChanges) {
+      console.log('No hay cambios nuevos. El artículo ya fue publicado.');
+      process.exit(0);
+    }
+    console.log('Cambios a commitear:\n' + hasChanges);
 
     execSync(`git commit -m "Publicar: ${entry.title}"`, { stdio: 'inherit' });
+
+    execSync('git pull --rebase origin main 2>/dev/null; true', { stdio: 'ignore' });
     execSync('git push', { stdio: 'inherit' });
 
     console.log(`\n✓ "${entry.title}" publicado y subido a GitHub.`);
